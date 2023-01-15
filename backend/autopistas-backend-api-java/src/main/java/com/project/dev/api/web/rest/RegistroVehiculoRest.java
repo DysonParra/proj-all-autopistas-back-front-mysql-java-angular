@@ -272,7 +272,7 @@ public class RegistroVehiculoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/RegistroVehiculo/{query}/pages")
+    @GetMapping("/RegistroVehiculo/search/{query}/pages")
     public ResponseEntity<List<RegistroVehiculoDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type RegistroVehiculo with the search : {}", query);
         Page<RegistroVehiculoDTO> page = null;
@@ -281,7 +281,7 @@ public class RegistroVehiculoRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/RegistroVehiculo/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/RegistroVehiculo/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

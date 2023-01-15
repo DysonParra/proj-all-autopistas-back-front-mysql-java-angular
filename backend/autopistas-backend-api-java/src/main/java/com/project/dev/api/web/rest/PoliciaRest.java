@@ -272,7 +272,7 @@ public class PoliciaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Policia/{query}/pages")
+    @GetMapping("/Policia/search/{query}/pages")
     public ResponseEntity<List<PoliciaDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Policia with the search : {}", query);
         Page<PoliciaDTO> page = null;
@@ -281,7 +281,7 @@ public class PoliciaRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Policia/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Policia/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

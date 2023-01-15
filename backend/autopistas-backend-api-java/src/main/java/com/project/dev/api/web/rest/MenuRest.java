@@ -272,7 +272,7 @@ public class MenuRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Menu/{query}/pages")
+    @GetMapping("/Menu/search/{query}/pages")
     public ResponseEntity<List<MenuDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Menu with the search : {}", query);
         Page<MenuDTO> page = null;
@@ -281,7 +281,7 @@ public class MenuRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Menu/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Menu/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
