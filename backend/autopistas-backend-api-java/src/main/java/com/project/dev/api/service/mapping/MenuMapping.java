@@ -48,7 +48,7 @@ public interface MenuMapping extends GenericMapping<MenuDTO, Menu> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "strId", target = "strId")
     @Override
-    public MenuDTO obtenerDto(Menu entity);
+    public MenuDTO getDto(Menu entity);
 
     /**
      * TODO: Definición de {@code withId}.

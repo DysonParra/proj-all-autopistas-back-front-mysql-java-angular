@@ -60,7 +60,7 @@ public class PesajeServiceImpl implements PesajeService {
     @Override
     public List<PesajeDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Pesaje");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class PesajeServiceImpl implements PesajeService {
     @Override
     public Page<PesajeDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Pesaje con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class PesajeServiceImpl implements PesajeService {
         Pesaje entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PesajeDTO actualEntity = entityMapping.obtenerDto(entity);
+        PesajeDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class PesajeServiceImpl implements PesajeService {
         log.debug("Solicitud para buscar la Entidad tipo Pesaje: {}", id);
         Pesaje searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class PesajeServiceImpl implements PesajeService {
     @Override
     public List<PesajeDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Pesaje: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class PesajeServiceImpl implements PesajeService {
     @Override
     public Page<PesajeDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Pesaje para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

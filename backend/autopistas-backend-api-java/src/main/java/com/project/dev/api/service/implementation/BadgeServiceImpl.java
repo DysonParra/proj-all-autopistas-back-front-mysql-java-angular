@@ -60,7 +60,7 @@ public class BadgeServiceImpl implements BadgeService {
     @Override
     public List<BadgeDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Badge");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class BadgeServiceImpl implements BadgeService {
     @Override
     public Page<BadgeDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Badge con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class BadgeServiceImpl implements BadgeService {
         Badge entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        BadgeDTO actualEntity = entityMapping.obtenerDto(entity);
+        BadgeDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class BadgeServiceImpl implements BadgeService {
         log.debug("Solicitud para buscar la Entidad tipo Badge: {}", id);
         Badge searchedEntity = entityRepository.findById(String.valueOf(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class BadgeServiceImpl implements BadgeService {
     @Override
     public List<BadgeDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Badge: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class BadgeServiceImpl implements BadgeService {
     @Override
     public Page<BadgeDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Badge para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

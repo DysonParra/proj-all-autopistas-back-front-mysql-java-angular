@@ -48,7 +48,7 @@ public interface PesajeMapping extends GenericMapping<PesajeDTO, Pesaje> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intId", target = "intId")
     @Override
-    public PesajeDTO obtenerDto(Pesaje entity);
+    public PesajeDTO getDto(Pesaje entity);
 
     /**
      * TODO: Definición de {@code withId}.

@@ -48,7 +48,7 @@ public interface BadgeMapping extends GenericMapping<BadgeDTO, Badge> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "strTitle", target = "strTitle")
     @Override
-    public BadgeDTO obtenerDto(Badge entity);
+    public BadgeDTO getDto(Badge entity);
 
     /**
      * TODO: Definición de {@code withId}.

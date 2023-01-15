@@ -60,7 +60,7 @@ public class VehiculoSobrepesoServiceImpl implements VehiculoSobrepesoService {
     @Override
     public List<VehiculoSobrepesoDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo VehiculoSobrepeso");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class VehiculoSobrepesoServiceImpl implements VehiculoSobrepesoService {
     @Override
     public Page<VehiculoSobrepesoDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo VehiculoSobrepeso con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class VehiculoSobrepesoServiceImpl implements VehiculoSobrepesoService {
         VehiculoSobrepeso entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        VehiculoSobrepesoDTO actualEntity = entityMapping.obtenerDto(entity);
+        VehiculoSobrepesoDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class VehiculoSobrepesoServiceImpl implements VehiculoSobrepesoService {
         log.debug("Solicitud para buscar la Entidad tipo VehiculoSobrepeso: {}", id);
         VehiculoSobrepeso searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class VehiculoSobrepesoServiceImpl implements VehiculoSobrepesoService {
     @Override
     public List<VehiculoSobrepesoDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo VehiculoSobrepeso: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class VehiculoSobrepesoServiceImpl implements VehiculoSobrepesoService {
     @Override
     public Page<VehiculoSobrepesoDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo VehiculoSobrepeso para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

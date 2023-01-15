@@ -48,7 +48,7 @@ public interface PerifericoMapping extends GenericMapping<PerifericoDTO, Perifer
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intId", target = "intId")
     @Override
-    public PerifericoDTO obtenerDto(Periferico entity);
+    public PerifericoDTO getDto(Periferico entity);
 
     /**
      * TODO: Definición de {@code withId}.

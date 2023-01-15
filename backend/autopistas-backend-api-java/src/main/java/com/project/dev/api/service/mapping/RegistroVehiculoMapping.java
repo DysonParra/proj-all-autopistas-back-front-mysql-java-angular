@@ -48,7 +48,7 @@ public interface RegistroVehiculoMapping extends GenericMapping<RegistroVehiculo
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intTiqueteNro", target = "intTiqueteNro")
     @Override
-    public RegistroVehiculoDTO obtenerDto(RegistroVehiculo entity);
+    public RegistroVehiculoDTO getDto(RegistroVehiculo entity);
 
     /**
      * TODO: Definición de {@code withId}.

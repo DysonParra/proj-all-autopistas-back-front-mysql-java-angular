@@ -48,7 +48,7 @@ public interface TransitoDinamicaMapping extends GenericMapping<TransitoDinamica
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdDinamica", target = "intIdDinamica")
     @Override
-    public TransitoDinamicaDTO obtenerDto(TransitoDinamica entity);
+    public TransitoDinamicaDTO getDto(TransitoDinamica entity);
 
     /**
      * TODO: Definición de {@code withId}.

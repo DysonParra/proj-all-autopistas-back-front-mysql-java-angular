@@ -48,7 +48,7 @@ public interface TramaComunicacionMapping extends GenericMapping<TramaComunicaci
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdTrama", target = "intIdTrama")
     @Override
-    public TramaComunicacionDTO obtenerDto(TramaComunicacion entity);
+    public TramaComunicacionDTO getDto(TramaComunicacion entity);
 
     /**
      * TODO: Definición de {@code withId}.

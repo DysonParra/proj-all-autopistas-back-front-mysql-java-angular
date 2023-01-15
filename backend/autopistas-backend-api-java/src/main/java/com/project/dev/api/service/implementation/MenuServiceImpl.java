@@ -60,7 +60,7 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public List<MenuDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Menu");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public Page<MenuDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Menu con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class MenuServiceImpl implements MenuService {
         Menu entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MenuDTO actualEntity = entityMapping.obtenerDto(entity);
+        MenuDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class MenuServiceImpl implements MenuService {
         log.debug("Solicitud para buscar la Entidad tipo Menu: {}", id);
         Menu searchedEntity = entityRepository.findById(String.valueOf(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public List<MenuDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Menu: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public Page<MenuDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Menu para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

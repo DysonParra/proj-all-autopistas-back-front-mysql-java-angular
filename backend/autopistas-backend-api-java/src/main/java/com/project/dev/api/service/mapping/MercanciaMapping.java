@@ -48,7 +48,7 @@ public interface MercanciaMapping extends GenericMapping<MercanciaDTO, Mercancia
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdMercancia", target = "intIdMercancia")
     @Override
-    public MercanciaDTO obtenerDto(Mercancia entity);
+    public MercanciaDTO getDto(Mercancia entity);
 
     /**
      * TODO: Definición de {@code withId}.

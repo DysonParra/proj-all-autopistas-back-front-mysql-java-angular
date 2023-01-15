@@ -60,7 +60,7 @@ public class RegistroVehiculoServiceImpl implements RegistroVehiculoService {
     @Override
     public List<RegistroVehiculoDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo RegistroVehiculo");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class RegistroVehiculoServiceImpl implements RegistroVehiculoService {
     @Override
     public Page<RegistroVehiculoDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo RegistroVehiculo con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class RegistroVehiculoServiceImpl implements RegistroVehiculoService {
         RegistroVehiculo entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        RegistroVehiculoDTO actualEntity = entityMapping.obtenerDto(entity);
+        RegistroVehiculoDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class RegistroVehiculoServiceImpl implements RegistroVehiculoService {
         log.debug("Solicitud para buscar la Entidad tipo RegistroVehiculo: {}", id);
         RegistroVehiculo searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class RegistroVehiculoServiceImpl implements RegistroVehiculoService {
     @Override
     public List<RegistroVehiculoDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo RegistroVehiculo: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class RegistroVehiculoServiceImpl implements RegistroVehiculoService {
     @Override
     public Page<RegistroVehiculoDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo RegistroVehiculo para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

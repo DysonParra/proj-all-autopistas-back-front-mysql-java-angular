@@ -48,7 +48,7 @@ public interface VehiculoSobrepesoMapping extends GenericMapping<VehiculoSobrepe
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdRepeso", target = "intIdRepeso")
     @Override
-    public VehiculoSobrepesoDTO obtenerDto(VehiculoSobrepeso entity);
+    public VehiculoSobrepesoDTO getDto(VehiculoSobrepeso entity);
 
     /**
      * TODO: Definición de {@code withId}.

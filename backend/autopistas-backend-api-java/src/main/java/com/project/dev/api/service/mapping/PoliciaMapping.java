@@ -48,7 +48,7 @@ public interface PoliciaMapping extends GenericMapping<PoliciaDTO, Policia> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdPolicia", target = "intIdPolicia")
     @Override
-    public PoliciaDTO obtenerDto(Policia entity);
+    public PoliciaDTO getDto(Policia entity);
 
     /**
      * TODO: Definición de {@code withId}.

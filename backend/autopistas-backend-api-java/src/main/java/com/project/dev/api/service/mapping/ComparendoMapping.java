@@ -48,7 +48,7 @@ public interface ComparendoMapping extends GenericMapping<ComparendoDTO, Compare
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdComparendo", target = "intIdComparendo")
     @Override
-    public ComparendoDTO obtenerDto(Comparendo entity);
+    public ComparendoDTO getDto(Comparendo entity);
 
     /**
      * TODO: Definición de {@code withId}.

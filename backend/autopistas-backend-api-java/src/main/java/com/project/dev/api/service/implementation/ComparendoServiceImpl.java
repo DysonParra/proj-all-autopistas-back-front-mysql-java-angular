@@ -60,7 +60,7 @@ public class ComparendoServiceImpl implements ComparendoService {
     @Override
     public List<ComparendoDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Comparendo");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class ComparendoServiceImpl implements ComparendoService {
     @Override
     public Page<ComparendoDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Comparendo con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class ComparendoServiceImpl implements ComparendoService {
         Comparendo entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ComparendoDTO actualEntity = entityMapping.obtenerDto(entity);
+        ComparendoDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class ComparendoServiceImpl implements ComparendoService {
         log.debug("Solicitud para buscar la Entidad tipo Comparendo: {}", id);
         Comparendo searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class ComparendoServiceImpl implements ComparendoService {
     @Override
     public List<ComparendoDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Comparendo: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class ComparendoServiceImpl implements ComparendoService {
     @Override
     public Page<ComparendoDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Comparendo para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

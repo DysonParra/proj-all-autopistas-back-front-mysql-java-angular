@@ -60,7 +60,7 @@ public class TramaComunicacionServiceImpl implements TramaComunicacionService {
     @Override
     public List<TramaComunicacionDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TramaComunicacion");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class TramaComunicacionServiceImpl implements TramaComunicacionService {
     @Override
     public Page<TramaComunicacionDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TramaComunicacion con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class TramaComunicacionServiceImpl implements TramaComunicacionService {
         TramaComunicacion entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TramaComunicacionDTO actualEntity = entityMapping.obtenerDto(entity);
+        TramaComunicacionDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class TramaComunicacionServiceImpl implements TramaComunicacionService {
         log.debug("Solicitud para buscar la Entidad tipo TramaComunicacion: {}", id);
         TramaComunicacion searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class TramaComunicacionServiceImpl implements TramaComunicacionService {
     @Override
     public List<TramaComunicacionDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TramaComunicacion: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class TramaComunicacionServiceImpl implements TramaComunicacionService {
     @Override
     public Page<TramaComunicacionDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo TramaComunicacion para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }
