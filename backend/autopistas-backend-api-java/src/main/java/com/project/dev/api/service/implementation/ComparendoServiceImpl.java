@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Comparendo;
 import com.project.dev.api.dto.ComparendoDTO;
 import com.project.dev.api.repository.ComparendoRepository;
-import com.project.dev.api.service.ComparendoService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.ComparendoMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class ComparendoServiceImpl implements ComparendoService {
+public class ComparendoServiceImpl implements GenericService<ComparendoDTO> {
 
     private final Logger log = LoggerFactory.getLogger(ComparendoServiceImpl.class);
     private final ComparendoRepository entityRepository;

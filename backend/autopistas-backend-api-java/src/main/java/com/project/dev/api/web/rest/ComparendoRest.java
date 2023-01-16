@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.ComparendoDTO;
-import com.project.dev.api.service.ComparendoService;
+import com.project.dev.api.service.implementation.ComparendoServiceImpl;
 import com.project.dev.api.web.rest.assembler.ComparendoRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class ComparendoRest {
 
     private final Logger log = LoggerFactory.getLogger(ComparendoRest.class);
-    private final ComparendoService entityService;
+    private final ComparendoServiceImpl entityService;
     private final ComparendoRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class ComparendoRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public ComparendoRest(ComparendoService entityService,
+    public ComparendoRest(ComparendoServiceImpl entityService,
             ComparendoRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

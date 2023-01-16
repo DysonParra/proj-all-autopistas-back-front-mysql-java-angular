@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.MercanciaDTO;
-import com.project.dev.api.service.MercanciaService;
+import com.project.dev.api.service.implementation.MercanciaServiceImpl;
 import com.project.dev.api.web.rest.assembler.MercanciaRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class MercanciaRest {
 
     private final Logger log = LoggerFactory.getLogger(MercanciaRest.class);
-    private final MercanciaService entityService;
+    private final MercanciaServiceImpl entityService;
     private final MercanciaRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class MercanciaRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public MercanciaRest(MercanciaService entityService,
+    public MercanciaRest(MercanciaServiceImpl entityService,
             MercanciaRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

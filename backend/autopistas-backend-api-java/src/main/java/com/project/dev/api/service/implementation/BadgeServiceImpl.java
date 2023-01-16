@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Badge;
 import com.project.dev.api.dto.BadgeDTO;
 import com.project.dev.api.repository.BadgeRepository;
-import com.project.dev.api.service.BadgeService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.BadgeMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class BadgeServiceImpl implements BadgeService {
+public class BadgeServiceImpl implements GenericService<BadgeDTO> {
 
     private final Logger log = LoggerFactory.getLogger(BadgeServiceImpl.class);
     private final BadgeRepository entityRepository;

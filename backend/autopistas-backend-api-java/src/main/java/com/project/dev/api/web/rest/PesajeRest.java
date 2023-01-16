@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.PesajeDTO;
-import com.project.dev.api.service.PesajeService;
+import com.project.dev.api.service.implementation.PesajeServiceImpl;
 import com.project.dev.api.web.rest.assembler.PesajeRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class PesajeRest {
 
     private final Logger log = LoggerFactory.getLogger(PesajeRest.class);
-    private final PesajeService entityService;
+    private final PesajeServiceImpl entityService;
     private final PesajeRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class PesajeRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public PesajeRest(PesajeService entityService,
+    public PesajeRest(PesajeServiceImpl entityService,
             PesajeRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

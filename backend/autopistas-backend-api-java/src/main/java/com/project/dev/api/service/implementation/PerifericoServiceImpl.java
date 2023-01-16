@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Periferico;
 import com.project.dev.api.dto.PerifericoDTO;
 import com.project.dev.api.repository.PerifericoRepository;
-import com.project.dev.api.service.PerifericoService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.PerifericoMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class PerifericoServiceImpl implements PerifericoService {
+public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
 
     private final Logger log = LoggerFactory.getLogger(PerifericoServiceImpl.class);
     private final PerifericoRepository entityRepository;

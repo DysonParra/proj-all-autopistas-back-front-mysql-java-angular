@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Mercancia;
 import com.project.dev.api.dto.MercanciaDTO;
 import com.project.dev.api.repository.MercanciaRepository;
-import com.project.dev.api.service.MercanciaService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MercanciaMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MercanciaServiceImpl implements MercanciaService {
+public class MercanciaServiceImpl implements GenericService<MercanciaDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MercanciaServiceImpl.class);
     private final MercanciaRepository entityRepository;

@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.BadgeDTO;
-import com.project.dev.api.service.BadgeService;
+import com.project.dev.api.service.implementation.BadgeServiceImpl;
 import com.project.dev.api.web.rest.assembler.BadgeRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class BadgeRest {
 
     private final Logger log = LoggerFactory.getLogger(BadgeRest.class);
-    private final BadgeService entityService;
+    private final BadgeServiceImpl entityService;
     private final BadgeRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class BadgeRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public BadgeRest(BadgeService entityService,
+    public BadgeRest(BadgeServiceImpl entityService,
             BadgeRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

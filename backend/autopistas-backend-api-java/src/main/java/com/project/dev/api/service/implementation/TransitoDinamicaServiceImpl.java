@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.TransitoDinamica;
 import com.project.dev.api.dto.TransitoDinamicaDTO;
 import com.project.dev.api.repository.TransitoDinamicaRepository;
-import com.project.dev.api.service.TransitoDinamicaService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.TransitoDinamicaMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class TransitoDinamicaServiceImpl implements TransitoDinamicaService {
+public class TransitoDinamicaServiceImpl implements GenericService<TransitoDinamicaDTO> {
 
     private final Logger log = LoggerFactory.getLogger(TransitoDinamicaServiceImpl.class);
     private final TransitoDinamicaRepository entityRepository;

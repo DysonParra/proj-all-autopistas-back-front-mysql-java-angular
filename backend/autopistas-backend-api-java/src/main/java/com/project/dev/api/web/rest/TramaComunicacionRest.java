@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.TramaComunicacionDTO;
-import com.project.dev.api.service.TramaComunicacionService;
+import com.project.dev.api.service.implementation.TramaComunicacionServiceImpl;
 import com.project.dev.api.web.rest.assembler.TramaComunicacionRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class TramaComunicacionRest {
 
     private final Logger log = LoggerFactory.getLogger(TramaComunicacionRest.class);
-    private final TramaComunicacionService entityService;
+    private final TramaComunicacionServiceImpl entityService;
     private final TramaComunicacionRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class TramaComunicacionRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public TramaComunicacionRest(TramaComunicacionService entityService,
+    public TramaComunicacionRest(TramaComunicacionServiceImpl entityService,
             TramaComunicacionRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.VehiculoSobrepeso;
 import com.project.dev.api.dto.VehiculoSobrepesoDTO;
 import com.project.dev.api.repository.VehiculoSobrepesoRepository;
-import com.project.dev.api.service.VehiculoSobrepesoService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.VehiculoSobrepesoMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class VehiculoSobrepesoServiceImpl implements VehiculoSobrepesoService {
+public class VehiculoSobrepesoServiceImpl implements GenericService<VehiculoSobrepesoDTO> {
 
     private final Logger log = LoggerFactory.getLogger(VehiculoSobrepesoServiceImpl.class);
     private final VehiculoSobrepesoRepository entityRepository;

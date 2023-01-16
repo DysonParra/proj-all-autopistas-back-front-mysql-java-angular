@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.MenuDTO;
-import com.project.dev.api.service.MenuService;
+import com.project.dev.api.service.implementation.MenuServiceImpl;
 import com.project.dev.api.web.rest.assembler.MenuRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class MenuRest {
 
     private final Logger log = LoggerFactory.getLogger(MenuRest.class);
-    private final MenuService entityService;
+    private final MenuServiceImpl entityService;
     private final MenuRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class MenuRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public MenuRest(MenuService entityService,
+    public MenuRest(MenuServiceImpl entityService,
             MenuRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

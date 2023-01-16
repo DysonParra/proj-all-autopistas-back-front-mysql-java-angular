@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.PerifericoDTO;
-import com.project.dev.api.service.PerifericoService;
+import com.project.dev.api.service.implementation.PerifericoServiceImpl;
 import com.project.dev.api.web.rest.assembler.PerifericoRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class PerifericoRest {
 
     private final Logger log = LoggerFactory.getLogger(PerifericoRest.class);
-    private final PerifericoService entityService;
+    private final PerifericoServiceImpl entityService;
     private final PerifericoRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class PerifericoRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public PerifericoRest(PerifericoService entityService,
+    public PerifericoRest(PerifericoServiceImpl entityService,
             PerifericoRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

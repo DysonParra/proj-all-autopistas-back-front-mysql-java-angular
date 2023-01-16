@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Menu;
 import com.project.dev.api.dto.MenuDTO;
 import com.project.dev.api.repository.MenuRepository;
-import com.project.dev.api.service.MenuService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MenuMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MenuServiceImpl implements MenuService {
+public class MenuServiceImpl implements GenericService<MenuDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MenuServiceImpl.class);
     private final MenuRepository entityRepository;

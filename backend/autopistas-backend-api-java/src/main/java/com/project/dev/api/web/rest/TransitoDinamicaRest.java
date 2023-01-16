@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.TransitoDinamicaDTO;
-import com.project.dev.api.service.TransitoDinamicaService;
+import com.project.dev.api.service.implementation.TransitoDinamicaServiceImpl;
 import com.project.dev.api.web.rest.assembler.TransitoDinamicaRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class TransitoDinamicaRest {
 
     private final Logger log = LoggerFactory.getLogger(TransitoDinamicaRest.class);
-    private final TransitoDinamicaService entityService;
+    private final TransitoDinamicaServiceImpl entityService;
     private final TransitoDinamicaRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class TransitoDinamicaRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public TransitoDinamicaRest(TransitoDinamicaService entityService,
+    public TransitoDinamicaRest(TransitoDinamicaServiceImpl entityService,
             TransitoDinamicaRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

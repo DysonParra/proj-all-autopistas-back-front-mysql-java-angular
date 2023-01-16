@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.PoliciaDTO;
-import com.project.dev.api.service.PoliciaService;
+import com.project.dev.api.service.implementation.PoliciaServiceImpl;
 import com.project.dev.api.web.rest.assembler.PoliciaRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class PoliciaRest {
 
     private final Logger log = LoggerFactory.getLogger(PoliciaRest.class);
-    private final PoliciaService entityService;
+    private final PoliciaServiceImpl entityService;
     private final PoliciaRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class PoliciaRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public PoliciaRest(PoliciaService entityService,
+    public PoliciaRest(PoliciaServiceImpl entityService,
             PoliciaRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

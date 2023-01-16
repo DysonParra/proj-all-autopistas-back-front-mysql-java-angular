@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.RegistroVehiculo;
 import com.project.dev.api.dto.RegistroVehiculoDTO;
 import com.project.dev.api.repository.RegistroVehiculoRepository;
-import com.project.dev.api.service.RegistroVehiculoService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.RegistroVehiculoMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class RegistroVehiculoServiceImpl implements RegistroVehiculoService {
+public class RegistroVehiculoServiceImpl implements GenericService<RegistroVehiculoDTO> {
 
     private final Logger log = LoggerFactory.getLogger(RegistroVehiculoServiceImpl.class);
     private final RegistroVehiculoRepository entityRepository;

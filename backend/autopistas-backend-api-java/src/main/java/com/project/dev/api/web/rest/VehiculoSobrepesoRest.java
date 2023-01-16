@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.VehiculoSobrepesoDTO;
-import com.project.dev.api.service.VehiculoSobrepesoService;
+import com.project.dev.api.service.implementation.VehiculoSobrepesoServiceImpl;
 import com.project.dev.api.web.rest.assembler.VehiculoSobrepesoRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class VehiculoSobrepesoRest {
 
     private final Logger log = LoggerFactory.getLogger(VehiculoSobrepesoRest.class);
-    private final VehiculoSobrepesoService entityService;
+    private final VehiculoSobrepesoServiceImpl entityService;
     private final VehiculoSobrepesoRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class VehiculoSobrepesoRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public VehiculoSobrepesoRest(VehiculoSobrepesoService entityService,
+    public VehiculoSobrepesoRest(VehiculoSobrepesoServiceImpl entityService,
             VehiculoSobrepesoRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

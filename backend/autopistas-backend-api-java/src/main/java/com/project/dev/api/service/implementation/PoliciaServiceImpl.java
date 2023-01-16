@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Policia;
 import com.project.dev.api.dto.PoliciaDTO;
 import com.project.dev.api.repository.PoliciaRepository;
-import com.project.dev.api.service.PoliciaService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.PoliciaMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class PoliciaServiceImpl implements PoliciaService {
+public class PoliciaServiceImpl implements GenericService<PoliciaDTO> {
 
     private final Logger log = LoggerFactory.getLogger(PoliciaServiceImpl.class);
     private final PoliciaRepository entityRepository;
