@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS autopistas;
-CREATE DATABASE IF NOT EXISTS autopistas;
-USE autopistas;
+DROP DATABASE IF EXISTS `autopistas`;
+CREATE DATABASE IF NOT EXISTS `autopistas`;
+USE `autopistas`;
 
 CREATE TABLE IF NOT EXISTS `usuario` (
     `cedula_usuario`                    BIGINT              NOT NULL,
@@ -10,23 +10,19 @@ CREATE TABLE IF NOT EXISTS `usuario` (
     `tipo_usuario`                      ENUM('1','2','3','4'),
     `contrasena`                        VARCHAR(30)             NULL DEFAULT NULL,
     `cargo_usuario`                     VARCHAR(30)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `cedula_usuario` ASC
-    )
+    PRIMARY KEY (`cedula_usuario` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `transito_dinamica` (
     `id_dinamica`                       BIGINT              NOT NULL AUTO_INCREMENT,
     `id_categoria`                      INT(5)                  NULL DEFAULT NULL,
-    `placa_vehiculo`                    VARCHAR(8)              NULL DEFAULT NULL,
+    `placa_vehiculo`                    VARCHAR(10)             NULL DEFAULT NULL,
     `fecha_hora_transito`               DATETIME                NULL DEFAULT NULL,
     `peso_general`                      INT(6)                  NULL DEFAULT NULL,
     `peso_ejes`                         VARCHAR(50)             NULL DEFAULT NULL,
     `velocidad`                         FLOAT                   NULL DEFAULT NULL,
     `base_64_placa`                     LONGTEXT                NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_dinamica` ASC
-    )
+    PRIMARY KEY (`id_dinamica` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `vehiculo_sobrepeso` (
@@ -34,11 +30,9 @@ CREATE TABLE IF NOT EXISTS `vehiculo_sobrepeso` (
     `id_dinamica`                       BIGINT                  NULL DEFAULT NULL,
     `peso_maximo`                       INT(6)                  NULL DEFAULT NULL,
     `diferencia_peso`                   INT(6)                  NULL DEFAULT NULL,
-    `placa_vehiculo`                    VARCHAR(8)              NULL DEFAULT NULL,
+    `placa_vehiculo`                    VARCHAR(10)             NULL DEFAULT NULL,
     `borrado`                           BIT                     NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_repeso` ASC
-    )
+    PRIMARY KEY (`id_repeso` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `registro_vehiculo` (
@@ -54,18 +48,14 @@ CREATE TABLE IF NOT EXISTS `registro_vehiculo` (
     `sobrepeso`                         BIGINT                  NULL DEFAULT NULL,
     `pesaje_autorizado`                 BIT                     NULL DEFAULT NULL,
     `comparendo`                        BIT                     NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `tiquete_nro` ASC
-    )
+    PRIMARY KEY (`tiquete_nro` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `mercancia` (
     `id_mercancia`                      BIGINT              NOT NULL,
     `nombre_mercancia`                  VARCHAR(50)             NULL DEFAULT NULL,
     `descripcion_mercancia`             VARCHAR(200)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_mercancia` ASC
-    )
+    PRIMARY KEY (`id_mercancia` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `conductor` (
@@ -73,9 +63,7 @@ CREATE TABLE IF NOT EXISTS `conductor` (
     `nombre_conductor`                  VARCHAR(50)             NULL DEFAULT NULL,
     `apellido_conductor`                VARCHAR(50)             NULL DEFAULT NULL,
     `telefono`                          VARCHAR(20)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `cedula_conductor` ASC
-    )
+    PRIMARY KEY (`cedula_conductor` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `categoria` (
@@ -87,32 +75,26 @@ CREATE TABLE IF NOT EXISTS `categoria` (
     `eje_sencillo`                      INT(6)                  NULL DEFAULT NULL,
     `eje_tandem`                        INT(6)                  NULL DEFAULT NULL,
     `total_ejes`                        INT(6)                  NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_categoria` ASC
-    )
+    PRIMARY KEY (`id_categoria` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `vehiculo` (
-    `placa_vehiculo`                    VARCHAR(6)          NOT NULL,
+    `placa_vehiculo`                    VARCHAR(10)         NOT NULL,
     `id_categoria`                      BIGINT                  NULL DEFAULT NULL,
     `observaciones`                     VARCHAR(200)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `placa_vehiculo` ASC
-    )
+    PRIMARY KEY (`placa_vehiculo` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `comparendo` (
     `id_comparendo`                     BIGINT              NOT NULL,
-    `placa_vehiculo`                    VARCHAR(6)              NULL DEFAULT NULL,
+    `placa_vehiculo`                    VARCHAR(10)             NULL DEFAULT NULL,
     `id_policia`                        BIGINT                  NULL DEFAULT NULL,
     `cedula_conductor`                  BIGINT                  NULL DEFAULT NULL,
     `tiquete_nro`                       BIGINT                  NULL DEFAULT NULL,
     `codigo_comparendo`                 INT(11)                 NULL DEFAULT NULL,
     `observaciones`                     VARCHAR(200)            NULL DEFAULT NULL,
     `tipo_infractor`                    ENUM('1','2','3')       NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_comparendo` ASC
-    )
+    PRIMARY KEY (`id_comparendo` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `trama_comunicacion` (
@@ -122,18 +104,14 @@ CREATE TABLE IF NOT EXISTS `trama_comunicacion` (
     `total_datos_peso`                  INT(5)                  NULL DEFAULT NULL,
     `caracter_fin`                      CHAR(5)                 NULL DEFAULT NULL,
     `caracter_inicio`                   CHAR(5)                 NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_trama` ASC
-    )
+    PRIMARY KEY (`id_trama` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `configuracion` (
     `id_configuracion`                  BIGINT              NOT NULL,
     `parametro`                         VARCHAR(50)             NULL DEFAULT NULL,
     `valor`                             LONGTEXT                NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_configuracion` ASC
-    )
+    PRIMARY KEY (`id_configuracion` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `policia` (
@@ -141,9 +119,7 @@ CREATE TABLE IF NOT EXISTS `policia` (
     `nombre_policia`                    VARCHAR(50)             NULL DEFAULT NULL,
     `apellido_policia`                  VARCHAR(50)             NULL DEFAULT NULL,
     `telefono`                          VARCHAR(20)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id_policia` ASC
-    )
+    PRIMARY KEY (`id_policia` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `menu` (
@@ -158,17 +134,13 @@ CREATE TABLE IF NOT EXISTS `menu` (
     `disabled`                          BIT                     NULL DEFAULT NULL,
     `badge`                             VARCHAR(50)             NULL DEFAULT NULL,
     `father`                            VARCHAR(200)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id` ASC
-    )
+    PRIMARY KEY (`id` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `badge` (
     `title`                             VARCHAR(50)         NOT NULL,
     `classes`                           VARCHAR(250)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `title` ASC
-    )
+    PRIMARY KEY (`title` ASC)
 );
 
 
@@ -197,9 +169,7 @@ CREATE TABLE IF NOT EXISTS `pesaje` (
     `contenedor`                        VARCHAR(50)             NULL DEFAULT NULL,
     `observacion`                       VARCHAR(250)            NULL DEFAULT NULL,
     `tipo_ingreso`                      ENUM('Despacho producto','Entrada materia prima', ''),
-    PRIMARY KEY (
-       `id` ASC
-    )
+    PRIMARY KEY (`id` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `periferico` (
@@ -208,9 +178,7 @@ CREATE TABLE IF NOT EXISTS `periferico` (
     `ip`                                VARCHAR(50)             NULL DEFAULT NULL,
     `puerto`                            BIGINT                  NULL DEFAULT NULL,
     `codigo`                            VARCHAR(50)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `id` ASC
-    )
+    PRIMARY KEY (`id` ASC)
 );
 
 -- ---------------------------- --

@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS autopistas;
-CREATE DATABASE IF NOT EXISTS autopistas;
-USE autopistas;
+DROP DATABASE IF EXISTS `autopistas`;
+CREATE DATABASE IF NOT EXISTS `autopistas`;
+USE `autopistas`;
 
 CREATE TABLE IF NOT EXISTS `Usuario` (
     `intCedulaUsuario`                  BIGINT              NOT NULL,
@@ -10,23 +10,19 @@ CREATE TABLE IF NOT EXISTS `Usuario` (
     `enmTipoUsuario`                    ENUM('1','2','3','4'),
     `strContrasena`                     VARCHAR(30)             NULL DEFAULT NULL,
     `strCargoUsuario`                   VARCHAR(30)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intCedulaUsuario` ASC
-    )
+    PRIMARY KEY (`intCedulaUsuario` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `TransitoDinamica` (
     `intIdDinamica`                     BIGINT              NOT NULL AUTO_INCREMENT,
     `intIdCategoria`                    INT(5)                  NULL DEFAULT NULL,
-    `strPlacaVehiculo`                  VARCHAR(8)              NULL DEFAULT NULL,
+    `strPlacaVehiculo`                  VARCHAR(10)             NULL DEFAULT NULL,
     `dtFechaHoraTransito`               DATETIME                NULL DEFAULT NULL,
     `intPesoGeneral`                    INT(6)                  NULL DEFAULT NULL,
     `strPesoEjes`                       VARCHAR(50)             NULL DEFAULT NULL,
     `fltVelocidad`                      FLOAT                   NULL DEFAULT NULL,
     `txtBase64Placa`                    LONGTEXT                NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdDinamica` ASC
-    )
+    PRIMARY KEY (`intIdDinamica` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `VehiculoSobrepeso` (
@@ -34,11 +30,9 @@ CREATE TABLE IF NOT EXISTS `VehiculoSobrepeso` (
     `intIdDinamica`                     BIGINT                  NULL DEFAULT NULL,
     `intPesoMaximo`                     INT(6)                  NULL DEFAULT NULL,
     `intDiferenciaPeso`                 INT(6)                  NULL DEFAULT NULL,
-    `strPlacaVehiculo`                  VARCHAR(8)              NULL DEFAULT NULL,
+    `strPlacaVehiculo`                  VARCHAR(10)             NULL DEFAULT NULL,
     `bitBorrado`                        BIT                     NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdRepeso` ASC
-    )
+    PRIMARY KEY (`intIdRepeso` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `RegistroVehiculo` (
@@ -54,18 +48,14 @@ CREATE TABLE IF NOT EXISTS `RegistroVehiculo` (
     `intSobrepeso`                      BIGINT                  NULL DEFAULT NULL,
     `bitPesajeAutorizado`               BIT                     NULL DEFAULT NULL,
     `bitComparendo`                     BIT                     NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intTiqueteNro` ASC
-    )
+    PRIMARY KEY (`intTiqueteNro` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Mercancia` (
     `intIdMercancia`                    BIGINT              NOT NULL,
     `strNombreMercancia`                VARCHAR(50)             NULL DEFAULT NULL,
     `strDescripcionMercancia`           VARCHAR(200)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdMercancia` ASC
-    )
+    PRIMARY KEY (`intIdMercancia` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Conductor` (
@@ -73,9 +63,7 @@ CREATE TABLE IF NOT EXISTS `Conductor` (
     `strNombreConductor`                VARCHAR(50)             NULL DEFAULT NULL,
     `strApellidoConductor`              VARCHAR(50)             NULL DEFAULT NULL,
     `strTelefono`                       VARCHAR(20)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intCedulaConductor` ASC
-    )
+    PRIMARY KEY (`intCedulaConductor` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Categoria` (
@@ -87,32 +75,26 @@ CREATE TABLE IF NOT EXISTS `Categoria` (
     `intEjeSencillo`                    INT(6)                  NULL DEFAULT NULL,
     `intEjeTandem`                      INT(6)                  NULL DEFAULT NULL,
     `intTotalEjes`                      INT(6)                  NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdCategoria` ASC
-    )
+    PRIMARY KEY (`intIdCategoria` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Vehiculo` (
-    `strPlacaVehiculo`                  VARCHAR(6)          NOT NULL,
+    `strPlacaVehiculo`                  VARCHAR(10)         NOT NULL,
     `intIdCategoria`                    BIGINT                  NULL DEFAULT NULL,
     `strObservaciones`                  VARCHAR(200)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `strPlacaVehiculo` ASC
-    )
+    PRIMARY KEY (`strPlacaVehiculo` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Comparendo` (
     `intIdComparendo`                   BIGINT              NOT NULL,
-    `strPlacaVehiculo`                  VARCHAR(6)              NULL DEFAULT NULL,
+    `strPlacaVehiculo`                  VARCHAR(10)             NULL DEFAULT NULL,
     `intIdPolicia`                      BIGINT                  NULL DEFAULT NULL,
     `intCedulaConductor`                BIGINT                  NULL DEFAULT NULL,
     `intTiqueteNro`                     BIGINT                  NULL DEFAULT NULL,
     `intCodigoComparendo`               INT(11)                 NULL DEFAULT NULL,
     `strObservaciones`                  VARCHAR(200)            NULL DEFAULT NULL,
     `enmTipoInfractor`                  ENUM('1','2','3')       NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdComparendo` ASC
-    )
+    PRIMARY KEY (`intIdComparendo` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `TramaComunicacion` (
@@ -122,18 +104,14 @@ CREATE TABLE IF NOT EXISTS `TramaComunicacion` (
     `intTotalDatosPeso`                 INT(5)                  NULL DEFAULT NULL,
     `crCaracterFin`                     CHAR(5)                 NULL DEFAULT NULL,
     `crCaracterInicio`                  CHAR(5)                 NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdTrama` ASC
-    )
+    PRIMARY KEY (`intIdTrama` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Configuracion` (
     `intIdConfiguracion`                BIGINT              NOT NULL,
     `strParametro`                      VARCHAR(50)             NULL DEFAULT NULL,
     `txtValor`                          LONGTEXT                NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdConfiguracion` ASC
-    )
+    PRIMARY KEY (`intIdConfiguracion` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Policia` (
@@ -141,9 +119,7 @@ CREATE TABLE IF NOT EXISTS `Policia` (
     `strNombrePolicia`                  VARCHAR(50)             NULL DEFAULT NULL,
     `strApellidoPolicia`                VARCHAR(50)             NULL DEFAULT NULL,
     `strTelefono`                       VARCHAR(20)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intIdPolicia` ASC
-    )
+    PRIMARY KEY (`intIdPolicia` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Menu` (
@@ -158,17 +134,13 @@ CREATE TABLE IF NOT EXISTS `Menu` (
     `bitDisabled`                       BIT                     NULL DEFAULT NULL,
     `strBadge`                          VARCHAR(50)             NULL DEFAULT NULL,
     `strFather`                         VARCHAR(200)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `strId` ASC
-    )
+    PRIMARY KEY (`strId` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Badge` (
     `strTitle`                          VARCHAR(50)         NOT NULL,
     `strClasses`                        VARCHAR(250)            NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `strTitle` ASC
-    )
+    PRIMARY KEY (`strTitle` ASC)
 );
 
 
@@ -197,9 +169,7 @@ CREATE TABLE IF NOT EXISTS `Pesaje` (
     `strContenedor`                     VARCHAR(50)             NULL DEFAULT NULL,
     `strObservacion`                    VARCHAR(250)            NULL DEFAULT NULL,
     `enmTipoIngreso`                    ENUM('Despacho producto','Entrada materia prima', ''),
-    PRIMARY KEY (
-       `intId` ASC
-    )
+    PRIMARY KEY (`intId` ASC)
 );
 
 CREATE TABLE IF NOT EXISTS `Periferico` (
@@ -208,9 +178,7 @@ CREATE TABLE IF NOT EXISTS `Periferico` (
     `strIp`                             VARCHAR(50)             NULL DEFAULT NULL,
     `intPuerto`                         BIGINT                  NULL DEFAULT NULL,
     `strCodigo`                         VARCHAR(50)             NULL DEFAULT NULL,
-    PRIMARY KEY (
-       `intId` ASC
-    )
+    PRIMARY KEY (`intId` ASC)
 );
 
 -- ---------------------------- --
