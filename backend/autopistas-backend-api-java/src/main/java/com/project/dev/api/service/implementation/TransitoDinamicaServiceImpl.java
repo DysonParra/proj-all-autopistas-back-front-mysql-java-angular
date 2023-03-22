@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TransitoDinamicaServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {TransitoDinamicaServiceImpl}
  *
  * @version         2.0
  *

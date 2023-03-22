@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PoliciaRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {PoliciaRest}
  *
  * @version         2.0
  *

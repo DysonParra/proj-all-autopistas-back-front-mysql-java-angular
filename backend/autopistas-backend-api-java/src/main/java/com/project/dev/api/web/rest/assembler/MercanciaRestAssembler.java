@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MercanciaRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {MercanciaRestAssembler}
  *
  * @version         2.0
  *

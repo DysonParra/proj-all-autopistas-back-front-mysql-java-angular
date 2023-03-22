@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BadgeMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {BadgeMapping}
  *
  * @version         2.0
  *

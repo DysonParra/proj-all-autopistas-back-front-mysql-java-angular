@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PesajeMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {PesajeMapping}
  *
  * @version         2.0
  *

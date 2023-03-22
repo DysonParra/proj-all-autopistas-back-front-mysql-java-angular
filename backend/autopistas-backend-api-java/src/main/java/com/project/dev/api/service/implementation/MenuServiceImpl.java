@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MenuServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {MenuServiceImpl}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MercanciaMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {MercanciaMapping}
  *
  * @version         2.0
  *

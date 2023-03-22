@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TramaComunicacionRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {TramaComunicacionRest}
  *
  * @version         2.0
  *

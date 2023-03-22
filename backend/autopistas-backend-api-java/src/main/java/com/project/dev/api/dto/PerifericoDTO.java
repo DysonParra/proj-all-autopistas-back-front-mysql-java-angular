@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {PerifericoDTO}
  *
  * @version         2.0
  *

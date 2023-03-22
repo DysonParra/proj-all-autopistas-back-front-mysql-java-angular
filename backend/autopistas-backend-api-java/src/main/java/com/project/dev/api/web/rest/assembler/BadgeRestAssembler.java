@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BadgeRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {BadgeRestAssembler}
  *
  * @version         2.0
  *

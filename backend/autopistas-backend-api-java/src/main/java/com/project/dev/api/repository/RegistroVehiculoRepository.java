@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegistroVehiculoRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {RegistroVehiculoRepository}
  *
  * @version         2.0
  *

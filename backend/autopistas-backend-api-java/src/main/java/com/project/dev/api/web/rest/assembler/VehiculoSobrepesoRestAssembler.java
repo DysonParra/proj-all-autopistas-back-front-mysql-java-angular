@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {VehiculoSobrepesoRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {VehiculoSobrepesoRestAssembler}
  *
  * @version         2.0
  *

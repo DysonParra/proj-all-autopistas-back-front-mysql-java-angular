@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MenuMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {MenuMapping}
  *
  * @version         2.0
  *

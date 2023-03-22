@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MercanciaRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {MercanciaRepository}
  *
  * @version         2.0
  *

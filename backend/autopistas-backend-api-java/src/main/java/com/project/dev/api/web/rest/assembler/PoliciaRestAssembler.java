@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PoliciaRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {PoliciaRestAssembler}
  *
  * @version         2.0
  *

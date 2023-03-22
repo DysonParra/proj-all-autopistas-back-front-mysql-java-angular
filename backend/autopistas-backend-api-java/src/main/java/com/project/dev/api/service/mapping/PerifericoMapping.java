@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {PerifericoMapping}
  *
  * @version         2.0
  *

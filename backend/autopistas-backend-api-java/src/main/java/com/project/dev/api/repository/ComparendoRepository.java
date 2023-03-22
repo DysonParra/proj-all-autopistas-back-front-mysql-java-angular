@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ComparendoRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {ComparendoRepository}
  *
  * @version         2.0
  *

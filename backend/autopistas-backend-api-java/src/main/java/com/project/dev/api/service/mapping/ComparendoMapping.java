@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ComparendoMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {ComparendoMapping}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TramaComunicacionRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {TramaComunicacionRestAssembler}
  *
  * @version         2.0
  *

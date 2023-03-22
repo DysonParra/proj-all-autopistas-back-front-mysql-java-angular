@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {PerifericoRest}
  *
  * @version         2.0
  *

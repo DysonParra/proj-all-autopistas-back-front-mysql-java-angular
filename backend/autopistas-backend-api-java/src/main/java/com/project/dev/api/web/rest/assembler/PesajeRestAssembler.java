@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PesajeRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {PesajeRestAssembler}
  *
  * @version         2.0
  *

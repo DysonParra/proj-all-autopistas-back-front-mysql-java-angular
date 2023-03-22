@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PoliciaMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {PoliciaMapping}
  *
  * @version         2.0
  *
