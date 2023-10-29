@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code MenuRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class MenuRestAssembler implements RepresentationModelAssembler<MenuDTO, EntityModel<MenuDTO>> {

@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code PoliciaRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class PoliciaRestAssembler implements RepresentationModelAssembler<PoliciaDTO, EntityModel<PoliciaDTO>> {

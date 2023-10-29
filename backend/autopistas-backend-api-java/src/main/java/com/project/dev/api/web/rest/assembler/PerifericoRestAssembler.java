@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code PerifericoRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class PerifericoRestAssembler implements RepresentationModelAssembler<PerifericoDTO, EntityModel<PerifericoDTO>> {
