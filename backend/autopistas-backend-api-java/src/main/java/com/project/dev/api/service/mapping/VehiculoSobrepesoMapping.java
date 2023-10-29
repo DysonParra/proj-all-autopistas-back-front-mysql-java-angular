@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code VehiculoSobrepesoMapping}.
+ * TODO: Description of {@code VehiculoSobrepesoMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface VehiculoSobrepesoMapping extends GenericMapping<VehiculoSobrepe
     public VehiculoSobrepesoDTO getDto(VehiculoSobrepeso entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

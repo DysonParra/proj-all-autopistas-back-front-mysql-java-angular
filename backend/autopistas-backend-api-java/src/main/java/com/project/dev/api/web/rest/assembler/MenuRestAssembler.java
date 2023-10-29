@@ -22,7 +22,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO: Definición de {@code MenuRestAssembler}.
+ * TODO: Description of {@code MenuRestAssembler}.
  *
  * @author Dyson Parra
  * @since 11

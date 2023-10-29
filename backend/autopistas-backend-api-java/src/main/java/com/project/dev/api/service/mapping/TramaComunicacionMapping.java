@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code TramaComunicacionMapping}.
+ * TODO: Description of {@code TramaComunicacionMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface TramaComunicacionMapping extends GenericMapping<TramaComunicaci
     public TramaComunicacionDTO getDto(TramaComunicacion entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

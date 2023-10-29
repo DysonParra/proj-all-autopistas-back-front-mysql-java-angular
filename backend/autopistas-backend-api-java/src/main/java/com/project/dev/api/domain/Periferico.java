@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Periferico}.
+ * TODO: Description of {@code Periferico}.
  *
  * @author Dyson Parra
  * @since 11

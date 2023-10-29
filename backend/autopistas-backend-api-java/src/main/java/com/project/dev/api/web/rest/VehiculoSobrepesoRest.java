@@ -50,7 +50,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 /**
- * TODO: Definición de {@code VehiculoSobrepesoRest}.
+ * TODO: Description of {@code VehiculoSobrepesoRest}.
  *
  * @author Dyson Parra
  * @since 11

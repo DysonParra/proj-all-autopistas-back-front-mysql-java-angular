@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code ComparendoMapping}.
+ * TODO: Description of {@code ComparendoMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface ComparendoMapping extends GenericMapping<ComparendoDTO, Compare
     public ComparendoDTO getDto(Comparendo entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code PesajeMapping}.
+ * TODO: Description of {@code PesajeMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface PesajeMapping extends GenericMapping<PesajeDTO, Pesaje> {
     public PesajeDTO getDto(Pesaje entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

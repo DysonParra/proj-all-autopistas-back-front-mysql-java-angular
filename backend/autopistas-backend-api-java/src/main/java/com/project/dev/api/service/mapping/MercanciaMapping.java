@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code MercanciaMapping}.
+ * TODO: Description of {@code MercanciaMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface MercanciaMapping extends GenericMapping<MercanciaDTO, Mercancia
     public MercanciaDTO getDto(Mercancia entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

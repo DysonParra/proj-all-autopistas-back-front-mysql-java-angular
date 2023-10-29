@@ -23,7 +23,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 /**
- * TODO: Definición de {@code MenuRepository}.
+ * TODO: Description of {@code MenuRepository}.
  *
  * @author Dyson Parra
  * @since 11

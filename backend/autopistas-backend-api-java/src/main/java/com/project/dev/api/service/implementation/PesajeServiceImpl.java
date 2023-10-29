@@ -29,7 +29,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * TODO: Definición de {@code PesajeServiceImpl}.
+ * TODO: Description of {@code PesajeServiceImpl}.
  *
  * @author Dyson Parra
  * @since 11

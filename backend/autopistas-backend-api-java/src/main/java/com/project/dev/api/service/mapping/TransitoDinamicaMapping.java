@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code TransitoDinamicaMapping}.
+ * TODO: Description of {@code TransitoDinamicaMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface TransitoDinamicaMapping extends GenericMapping<TransitoDinamica
     public TransitoDinamicaDTO getDto(TransitoDinamica entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

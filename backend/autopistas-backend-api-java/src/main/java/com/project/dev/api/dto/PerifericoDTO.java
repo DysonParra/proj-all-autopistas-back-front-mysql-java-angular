@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code PerifericoDTO}.
+ * TODO: Description of {@code PerifericoDTO}.
  *
  * @author Dyson Parra
  * @since 11

@@ -22,7 +22,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO: Definición de {@code RegistroVehiculoRestAssembler}.
+ * TODO: Description of {@code RegistroVehiculoRestAssembler}.
  *
  * @author Dyson Parra
  * @since 11

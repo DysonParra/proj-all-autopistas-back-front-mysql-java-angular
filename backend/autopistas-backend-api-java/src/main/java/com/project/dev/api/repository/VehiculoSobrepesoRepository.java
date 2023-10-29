@@ -23,7 +23,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 /**
- * TODO: Definición de {@code VehiculoSobrepesoRepository}.
+ * TODO: Description of {@code VehiculoSobrepesoRepository}.
  *
  * @author Dyson Parra
  * @since 11

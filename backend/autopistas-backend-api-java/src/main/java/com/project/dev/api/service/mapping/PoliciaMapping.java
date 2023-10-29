@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code PoliciaMapping}.
+ * TODO: Description of {@code PoliciaMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface PoliciaMapping extends GenericMapping<PoliciaDTO, Policia> {
     public PoliciaDTO getDto(Policia entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return
