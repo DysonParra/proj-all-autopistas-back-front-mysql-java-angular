@@ -91,8 +91,8 @@ public class PesajeServiceImpl implements GenericService<PesajeDTO> {
         Pesaje entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PesajeDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        PesajeDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

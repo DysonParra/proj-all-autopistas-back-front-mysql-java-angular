@@ -91,8 +91,8 @@ public class BadgeServiceImpl implements GenericService<BadgeDTO> {
         Badge entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        BadgeDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        BadgeDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

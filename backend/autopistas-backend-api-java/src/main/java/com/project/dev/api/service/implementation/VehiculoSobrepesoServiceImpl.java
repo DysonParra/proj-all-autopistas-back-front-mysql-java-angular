@@ -91,8 +91,8 @@ public class VehiculoSobrepesoServiceImpl implements GenericService<VehiculoSobr
         VehiculoSobrepeso entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        VehiculoSobrepesoDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        VehiculoSobrepesoDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

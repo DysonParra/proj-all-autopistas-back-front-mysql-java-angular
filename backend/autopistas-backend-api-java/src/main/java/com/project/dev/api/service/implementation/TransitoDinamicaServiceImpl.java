@@ -91,8 +91,8 @@ public class TransitoDinamicaServiceImpl implements GenericService<TransitoDinam
         TransitoDinamica entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TransitoDinamicaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TransitoDinamicaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

@@ -91,8 +91,8 @@ public class RegistroVehiculoServiceImpl implements GenericService<RegistroVehic
         RegistroVehiculo entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        RegistroVehiculoDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        RegistroVehiculoDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

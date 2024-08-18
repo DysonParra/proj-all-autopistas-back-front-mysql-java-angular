@@ -91,8 +91,8 @@ public class TramaComunicacionServiceImpl implements GenericService<TramaComunic
         TramaComunicacion entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TramaComunicacionDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TramaComunicacionDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

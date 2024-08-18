@@ -91,8 +91,8 @@ public class ComparendoServiceImpl implements GenericService<ComparendoDTO> {
         Comparendo entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ComparendoDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        ComparendoDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

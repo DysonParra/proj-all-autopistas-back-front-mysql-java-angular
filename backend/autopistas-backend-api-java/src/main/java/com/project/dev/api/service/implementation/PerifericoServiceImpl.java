@@ -91,8 +91,8 @@ public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
         Periferico entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PerifericoDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        PerifericoDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

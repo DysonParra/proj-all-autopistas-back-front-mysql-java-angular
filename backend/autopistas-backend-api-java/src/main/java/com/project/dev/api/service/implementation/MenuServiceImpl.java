@@ -91,8 +91,8 @@ public class MenuServiceImpl implements GenericService<MenuDTO> {
         Menu entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MenuDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MenuDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

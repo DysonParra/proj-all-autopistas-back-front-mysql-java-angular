@@ -91,8 +91,8 @@ public class MercanciaServiceImpl implements GenericService<MercanciaDTO> {
         Mercancia entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MercanciaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MercanciaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

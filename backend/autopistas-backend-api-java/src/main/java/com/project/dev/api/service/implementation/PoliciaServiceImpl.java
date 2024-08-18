@@ -91,8 +91,8 @@ public class PoliciaServiceImpl implements GenericService<PoliciaDTO> {
         Policia entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PoliciaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        PoliciaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**
