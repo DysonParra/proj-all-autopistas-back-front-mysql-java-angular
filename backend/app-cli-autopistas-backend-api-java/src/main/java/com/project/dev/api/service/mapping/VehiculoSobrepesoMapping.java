@@ -49,7 +49,7 @@ public interface VehiculoSobrepesoMapping extends GenericMapping<VehiculoSobrepe
     public VehiculoSobrepesoDTO getDto(VehiculoSobrepeso entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

@@ -49,7 +49,7 @@ public interface TransitoDinamicaMapping extends GenericMapping<TransitoDinamica
     public TransitoDinamicaDTO getDto(TransitoDinamica entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

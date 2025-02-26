@@ -49,7 +49,7 @@ public interface RegistroVehiculoMapping extends GenericMapping<RegistroVehiculo
     public RegistroVehiculoDTO getDto(RegistroVehiculo entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

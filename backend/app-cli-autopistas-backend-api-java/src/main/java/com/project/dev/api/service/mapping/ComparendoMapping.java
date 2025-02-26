@@ -49,7 +49,7 @@ public interface ComparendoMapping extends GenericMapping<ComparendoDTO, Compare
     public ComparendoDTO getDto(Comparendo entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

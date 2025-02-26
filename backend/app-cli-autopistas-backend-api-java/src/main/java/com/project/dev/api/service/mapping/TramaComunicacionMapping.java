@@ -49,7 +49,7 @@ public interface TramaComunicacionMapping extends GenericMapping<TramaComunicaci
     public TramaComunicacionDTO getDto(TramaComunicacion entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

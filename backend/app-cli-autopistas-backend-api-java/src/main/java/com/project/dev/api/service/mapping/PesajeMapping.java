@@ -49,7 +49,7 @@ public interface PesajeMapping extends GenericMapping<PesajeDTO, Pesaje> {
     public PesajeDTO getDto(Pesaje entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

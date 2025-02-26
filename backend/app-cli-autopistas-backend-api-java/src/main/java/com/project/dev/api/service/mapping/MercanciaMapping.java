@@ -49,7 +49,7 @@ public interface MercanciaMapping extends GenericMapping<MercanciaDTO, Mercancia
     public MercanciaDTO getDto(Mercancia entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return
