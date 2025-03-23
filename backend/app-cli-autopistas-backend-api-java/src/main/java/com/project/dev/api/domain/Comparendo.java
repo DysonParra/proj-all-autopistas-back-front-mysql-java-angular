@@ -44,13 +44,9 @@ public class Comparendo implements Serializable {
     private Integer intCodigoComparendo;
     private String strObservaciones;
     private Character enmTipoInfractor;
-    @JoinColumn(name = "intCedulaConductor", referencedColumnName = "intCedulaConductor")
     private Long intCedulaConductor;
-    @JoinColumn(name = "intIdPolicia", referencedColumnName = "intIdPolicia")
     private Long intIdPolicia;
-    @JoinColumn(name = "strPlacaVehiculo", referencedColumnName = "strPlacaVehiculo")
     private String strPlacaVehiculo;
-    @JoinColumn(name = "intTiqueteNro", referencedColumnName = "intTiqueteNro")
     private Long intTiqueteNro;
 
 }

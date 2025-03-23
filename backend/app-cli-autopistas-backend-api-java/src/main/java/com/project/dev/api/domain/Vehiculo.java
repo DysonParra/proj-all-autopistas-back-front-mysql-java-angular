@@ -42,7 +42,6 @@ public class Vehiculo implements Serializable {
     @Column(nullable = false)
     private String strPlacaVehiculo;
     private String strObservaciones;
-    @JoinColumn(name = "intIdCategoria", referencedColumnName = "intIdCategoria")
     private Long intIdCategoria;
 
 }

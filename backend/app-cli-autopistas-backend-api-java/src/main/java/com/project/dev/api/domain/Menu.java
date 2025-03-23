@@ -49,9 +49,7 @@ public class Menu implements Serializable {
     private Boolean bitExactMatch;
     private Boolean bitActive;
     private Boolean bitDisabled;
-    @JoinColumn(name = "strBadge", referencedColumnName = "strTitle")
     private String strBadge;
-    @JoinColumn(name = "strFather", referencedColumnName = "strId")
     private String strFather;
 
 }

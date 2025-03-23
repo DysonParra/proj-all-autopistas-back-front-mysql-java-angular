@@ -47,17 +47,11 @@ public class RegistroVehiculo implements Serializable {
     private Long intSobrepeso;
     private Boolean bitPesajeAutorizado;
     private Boolean bitComparendo;
-    @JoinColumn(name = "intCedulaConductor", referencedColumnName = "intCedulaConductor")
     private Long intCedulaConductor;
-    @JoinColumn(name = "intCedulaUsuario", referencedColumnName = "intCedulaUsuario")
     private Long intCedulaUsuario;
-    @JoinColumn(name = "intIdCategoria", referencedColumnName = "intIdCategoria")
     private Long intIdCategoria;
-    @JoinColumn(name = "intIdMercancia", referencedColumnName = "intIdMercancia")
     private Long intIdMercancia;
-    @JoinColumn(name = "intIdRepeso", referencedColumnName = "intIdRepeso")
     private Long intIdRepeso;
-    @JoinColumn(name = "strPlacaVehiculo", referencedColumnName = "strPlacaVehiculo")
     private String strPlacaVehiculo;
 
 }

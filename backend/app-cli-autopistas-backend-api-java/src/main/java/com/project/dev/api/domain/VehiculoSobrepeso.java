@@ -46,7 +46,6 @@ public class VehiculoSobrepeso implements Serializable {
     private Integer intDiferenciaPeso;
     private String strPlacaVehiculo;
     private Boolean bitBorrado;
-    @JoinColumn(name = "intIdDinamica", referencedColumnName = "intIdDinamica")
     private Long intIdDinamica;
 
 }
