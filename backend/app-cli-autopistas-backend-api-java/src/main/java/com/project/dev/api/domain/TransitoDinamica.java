@@ -43,17 +43,13 @@ public class TransitoDinamica implements Serializable {
     @Column(nullable = false)
     private Long intIdDinamica;
     private Integer intIdCategoria;
-    @Column(length = 8)
     private String strPlacaVehiculo;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaHoraTransito;
     private Integer intPesoGeneral;
-    @Column(length = 50)
     private String strPesoEjes;
-    @Column(precision = 12, scale = 0)
     private Float fltVelocidad;
     @Lob
-    @Column(length = 2147483647)
     private String txtBase64Placa;
 
 }

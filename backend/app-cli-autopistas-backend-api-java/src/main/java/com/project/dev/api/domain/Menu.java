@@ -39,17 +39,12 @@ public class Menu implements Serializable {
 
     @Id
     @Basic(optional = false)
-    @Column(nullable = false, length = 200)
+    @Column(nullable = false)
     private String strId;
-    @Column(length = 100)
     private String strTitle;
-    @Column(length = 200)
     private String strSubtitle;
-    @Column(length = 100)
     private String strType;
-    @Column(length = 100)
     private String strIcon;
-    @Column(length = 100)
     private String strLink;
     private Boolean bitExactMatch;
     private Boolean bitActive;

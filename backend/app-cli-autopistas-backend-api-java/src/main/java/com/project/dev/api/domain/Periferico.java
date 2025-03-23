@@ -42,12 +42,10 @@ public class Periferico implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intId;
-    @Column(length = 16, columnDefinition = "enum")
+    @Column(columnDefinition = "enum")
     private String enmTipoPeriferico;
-    @Column(length = 50)
     private String strIp;
     private Long intPuerto;
-    @Column(length = 50)
     private String strCodigo;
 
 }

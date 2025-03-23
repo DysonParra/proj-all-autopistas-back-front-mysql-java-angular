@@ -41,11 +41,8 @@ public class Conductor implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intCedulaConductor;
-    @Column(length = 50)
     private String strNombreConductor;
-    @Column(length = 50)
     private String strApellidoConductor;
-    @Column(length = 20)
     private String strTelefono;
 
 }

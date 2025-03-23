@@ -39,9 +39,8 @@ public class Badge implements Serializable {
 
     @Id
     @Basic(optional = false)
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false)
     private String strTitle;
-    @Column(length = 250)
     private String strClasses;
 
 }

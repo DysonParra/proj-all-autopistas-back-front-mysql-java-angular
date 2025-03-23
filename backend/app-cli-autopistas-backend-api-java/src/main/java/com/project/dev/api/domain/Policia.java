@@ -41,11 +41,8 @@ public class Policia implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdPolicia;
-    @Column(length = 50)
     private String strNombrePolicia;
-    @Column(length = 50)
     private String strApellidoPolicia;
-    @Column(length = 20)
     private String strTelefono;
 
 }

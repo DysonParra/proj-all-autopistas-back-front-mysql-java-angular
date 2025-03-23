@@ -43,48 +43,30 @@ public class Pesaje implements Serializable {
     @Column(nullable = false)
     private Long intId;
     private Long intTiqueteNumero;
-    @Column(length = 10)
     private String strPlaca;
-    @Column(length = 50)
     private String strCodigo;
     private Long intNumeroInterno;
-    @Column(length = 20)
     private String strTipoVehiculo;
-    @Column(length = 100)
     private String strConductor;
-    @Column(length = 20)
     private String strCedula;
-    @Column(length = 100)
     private String strProducto;
-    @Column(length = 100)
     private String strPlanta;
-    @Column(length = 100)
     private String strCliente;
-    @Column(length = 100)
     private String strTransportadora;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaHoraPesoVacio;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaHoraPesoLleno;
-    @Column(length = 50)
     private String strCiv;
-    @Column(length = 80)
     private String strDireccion;
-    @Column(length = 100)
     private String strEntregadoPor;
-    @Column(length = 100)
     private String strRecibidoPor;
-    @Column(length = 50)
     private String strShipment;
-    @Column(length = 50)
     private String strSello;
-    @Column(length = 50)
     private String strR;
-    @Column(length = 50)
     private String strContenedor;
-    @Column(length = 250)
     private String strObservacion;
-    @Column(length = 21, columnDefinition = "enum")
+    @Column(columnDefinition = "enum")
     private String enmTipoIngreso;
 
 }

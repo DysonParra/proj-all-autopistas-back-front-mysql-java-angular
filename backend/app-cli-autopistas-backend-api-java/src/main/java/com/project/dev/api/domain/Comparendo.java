@@ -42,7 +42,6 @@ public class Comparendo implements Serializable {
     @Column(nullable = false)
     private Long intIdComparendo;
     private Integer intCodigoComparendo;
-    @Column(length = 200)
     private String strObservaciones;
     private Character enmTipoInfractor;
     @JoinColumn(name = "intCedulaConductor", referencedColumnName = "intCedulaConductor")

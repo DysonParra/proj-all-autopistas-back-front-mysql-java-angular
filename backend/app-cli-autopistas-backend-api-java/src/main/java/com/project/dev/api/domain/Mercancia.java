@@ -41,9 +41,7 @@ public class Mercancia implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMercancia;
-    @Column(length = 50)
     private String strNombreMercancia;
-    @Column(length = 200)
     private String strDescripcionMercancia;
 
 }

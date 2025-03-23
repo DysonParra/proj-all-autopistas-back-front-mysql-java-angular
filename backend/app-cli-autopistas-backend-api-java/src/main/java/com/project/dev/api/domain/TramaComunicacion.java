@@ -41,13 +41,12 @@ public class TramaComunicacion implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTrama;
-    @Column(length = 50)
     private String strNombreTrama;
     private Integer intPosicionInicial;
     private Integer intTotalDatosPeso;
-    @Column(length = 5, columnDefinition = "Character")
+    @Column(columnDefinition = "Character")
     private String crCaracterFin;
-    @Column(length = 5, columnDefinition = "Character")
+    @Column(columnDefinition = "Character")
     private String crCaracterInicio;
 
 }

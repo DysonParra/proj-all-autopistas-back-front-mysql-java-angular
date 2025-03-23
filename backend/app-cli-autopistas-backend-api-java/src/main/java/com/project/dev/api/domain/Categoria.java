@@ -41,11 +41,9 @@ public class Categoria implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdCategoria;
-    @Column(length = 6)
     private String strCategoria;
     private Integer intPesoMaximo;
     private Integer intTolerancia;
-    @Column(length = 200)
     private String strDescripcion;
     private Integer intEjeSencillo;
     private Integer intEjeTandem;

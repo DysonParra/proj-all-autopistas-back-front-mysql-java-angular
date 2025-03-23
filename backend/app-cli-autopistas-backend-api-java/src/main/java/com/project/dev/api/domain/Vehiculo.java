@@ -39,9 +39,8 @@ public class Vehiculo implements Serializable {
 
     @Id
     @Basic(optional = false)
-    @Column(nullable = false, length = 6)
+    @Column(nullable = false)
     private String strPlacaVehiculo;
-    @Column(length = 200)
     private String strObservaciones;
     @JoinColumn(name = "intIdCategoria", referencedColumnName = "intIdCategoria")
     private Long intIdCategoria;

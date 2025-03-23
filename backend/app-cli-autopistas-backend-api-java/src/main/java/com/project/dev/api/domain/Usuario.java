@@ -41,16 +41,11 @@ public class Usuario implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intCedulaUsuario;
-    @Column(length = 50)
     private String strNombreUsuario;
-    @Column(length = 50)
     private String strApellidoUsuario;
-    @Column(length = 30)
     private String strSeudonimo;
     private Character enmTipoUsuario;
-    @Column(length = 30)
     private String strContrasena;
-    @Column(length = 30)
     private String strCargoUsuario;
 
 }
