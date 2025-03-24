@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS `autopistas`;
 CREATE DATABASE IF NOT EXISTS `autopistas`;
 USE `autopistas`;
 
-CREATE TABLE IF NOT EXISTS `Usuario` (
+CREATE TABLE IF NOT EXISTS `usuario` (
     `intCedulaUsuario`                  BIGINT              NOT NULL,
     `strNombreUsuario`                  VARCHAR(50)             NULL DEFAULT NULL,
     `strApellidoUsuario`                VARCHAR(50)             NULL DEFAULT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `Usuario` (
     PRIMARY KEY (`intCedulaUsuario` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `TransitoDinamica` (
+CREATE TABLE IF NOT EXISTS `transito_dinamica` (
     `intIdDinamica`                     BIGINT              NOT NULL AUTO_INCREMENT,
     `intIdCategoria`                    INT(5)                  NULL DEFAULT NULL,
     `strPlacaVehiculo`                  VARCHAR(10)             NULL DEFAULT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `TransitoDinamica` (
     PRIMARY KEY (`intIdDinamica` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `VehiculoSobrepeso` (
+CREATE TABLE IF NOT EXISTS `vehiculo_sobrepeso` (
     `intIdRepeso`                       BIGINT              NOT NULL AUTO_INCREMENT,
     `intIdDinamica`                     BIGINT                  NULL DEFAULT NULL,
     `intPesoMaximo`                     INT(6)                  NULL DEFAULT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `VehiculoSobrepeso` (
     PRIMARY KEY (`intIdRepeso` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `RegistroVehiculo` (
+CREATE TABLE IF NOT EXISTS `registro_vehiculo` (
     `intTiqueteNro`                     BIGINT              NOT NULL,
     `intIdRepeso`                       BIGINT                  NULL DEFAULT NULL,
     `intIdCategoria`                    BIGINT                  NULL DEFAULT NULL,
@@ -51,14 +51,14 @@ CREATE TABLE IF NOT EXISTS `RegistroVehiculo` (
     PRIMARY KEY (`intTiqueteNro` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Mercancia` (
+CREATE TABLE IF NOT EXISTS `mercancia` (
     `intIdMercancia`                    BIGINT              NOT NULL,
     `strNombreMercancia`                VARCHAR(50)             NULL DEFAULT NULL,
     `strDescripcionMercancia`           VARCHAR(200)            NULL DEFAULT NULL,
     PRIMARY KEY (`intIdMercancia` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Conductor` (
+CREATE TABLE IF NOT EXISTS `conductor` (
     `intCedulaConductor`                BIGINT              NOT NULL,
     `strNombreConductor`                VARCHAR(50)             NULL DEFAULT NULL,
     `strApellidoConductor`              VARCHAR(50)             NULL DEFAULT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `Conductor` (
     PRIMARY KEY (`intCedulaConductor` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Categoria` (
+CREATE TABLE IF NOT EXISTS `categoria` (
     `intIdCategoria`                    BIGINT              NOT NULL,
     `strCategoria`                      VARCHAR(6)              NULL DEFAULT NULL,
     `intPesoMaximo`                     INT(6)                  NULL DEFAULT NULL,
@@ -78,14 +78,14 @@ CREATE TABLE IF NOT EXISTS `Categoria` (
     PRIMARY KEY (`intIdCategoria` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Vehiculo` (
+CREATE TABLE IF NOT EXISTS `vehiculo` (
     `strPlacaVehiculo`                  VARCHAR(10)         NOT NULL,
     `intIdCategoria`                    BIGINT                  NULL DEFAULT NULL,
     `strObservaciones`                  VARCHAR(200)            NULL DEFAULT NULL,
     PRIMARY KEY (`strPlacaVehiculo` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Comparendo` (
+CREATE TABLE IF NOT EXISTS `comparendo` (
     `intIdComparendo`                   BIGINT              NOT NULL,
     `strPlacaVehiculo`                  VARCHAR(10)             NULL DEFAULT NULL,
     `intIdPolicia`                      BIGINT                  NULL DEFAULT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `Comparendo` (
     PRIMARY KEY (`intIdComparendo` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `TramaComunicacion` (
+CREATE TABLE IF NOT EXISTS `trama_comunicacion` (
     `intIdTrama`                        BIGINT              NOT NULL,
     `strNombreTrama`                    VARCHAR(50)             NULL DEFAULT NULL,
     `intPosicionInicial`                INT(5)                  NULL DEFAULT NULL,
@@ -107,14 +107,14 @@ CREATE TABLE IF NOT EXISTS `TramaComunicacion` (
     PRIMARY KEY (`intIdTrama` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Configuracion` (
+CREATE TABLE IF NOT EXISTS `configuracion` (
     `intIdConfiguracion`                BIGINT              NOT NULL,
     `strParametro`                      VARCHAR(50)             NULL DEFAULT NULL,
     `txtValor`                          LONGTEXT                NULL DEFAULT NULL,
     PRIMARY KEY (`intIdConfiguracion` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Policia` (
+CREATE TABLE IF NOT EXISTS `policia` (
     `intIdPolicia`                      BIGINT              NOT NULL,
     `strNombrePolicia`                  VARCHAR(50)             NULL DEFAULT NULL,
     `strApellidoPolicia`                VARCHAR(50)             NULL DEFAULT NULL,
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `Policia` (
     PRIMARY KEY (`intIdPolicia` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Menu` (
+CREATE TABLE IF NOT EXISTS `menu` (
     `strId`                             VARCHAR(200)        NOT NULL,
     `strTitle`                          VARCHAR(100)            NULL DEFAULT NULL,
     `strSubtitle`                       VARCHAR(200)            NULL DEFAULT NULL,
@@ -137,14 +137,14 @@ CREATE TABLE IF NOT EXISTS `Menu` (
     PRIMARY KEY (`strId` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Badge` (
+CREATE TABLE IF NOT EXISTS `badge` (
     `strTitle`                          VARCHAR(50)         NOT NULL,
     `strClasses`                        VARCHAR(250)            NULL DEFAULT NULL,
     PRIMARY KEY (`strTitle` ASC)
 );
 
 
-CREATE TABLE IF NOT EXISTS `Pesaje` (
+CREATE TABLE IF NOT EXISTS `pesaje` (
     `intId`                             BIGINT              NOT NULL AUTO_INCREMENT,
     `intTiqueteNumero`                  BIGINT                  NULL DEFAULT NULL,
     `strPlaca`                          VARCHAR(10)             NULL DEFAULT NULL,
@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `Pesaje` (
     PRIMARY KEY (`intId` ASC)
 );
 
-CREATE TABLE IF NOT EXISTS `Periferico` (
+CREATE TABLE IF NOT EXISTS `periferico` (
     `intId`                             BIGINT              NOT NULL AUTO_INCREMENT,
     `enmTipoPeriferico`                 ENUM('Bascula_Estatica','Bascula_Dinamica', ''),
     `strIp`                             VARCHAR(50)             NULL DEFAULT NULL,
