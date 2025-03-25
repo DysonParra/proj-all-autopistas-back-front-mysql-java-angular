@@ -88,7 +88,7 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Comparendo")
+    @GetMapping("/comparendo")
     public CollectionModel<EntityModel<ComparendoDTO>> getAllEntities() {
         log.debug("REST request to get all entities type Comparendo");
         List<EntityModel<ComparendoDTO>> entities = null;
@@ -118,14 +118,14 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Comparendo/pages")
+    @GetMapping("/comparendo/pages")
     public ResponseEntity<CollectionModel<EntityModel<ComparendoDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type Comparendo");
         Page<ComparendoDTO> page = null;
         List<EntityModel<ComparendoDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Comparendo/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/comparendo/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/Comparendo")
+    @PostMapping("/comparendo")
     public ResponseEntity<?> saveEntity(@RequestBody ComparendoDTO entityDTO) {
         log.debug("POST request to save a new entity type Comparendo");
         EntityModel<ComparendoDTO> resource = null;
@@ -180,7 +180,7 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/Comparendo/{id}")
+    @PutMapping("/comparendo/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody ComparendoDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Comparendo/{id}")
+    @GetMapping("/comparendo/{id}")
     public ResponseEntity<EntityModel<ComparendoDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type Comparendo with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/Comparendo/{id}")
+    @DeleteMapping("/comparendo/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity Comparendo with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Comparendo/search/{query}")
+    @GetMapping("/comparendo/search/{query}")
     public CollectionModel<EntityModel<ComparendoDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type Comparendo with the search : {} ", query);
         List<EntityModel<ComparendoDTO>> entities = null;
@@ -279,14 +279,14 @@ public class ComparendoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Comparendo/search/{query}/pages")
+    @GetMapping("/comparendo/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<ComparendoDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Comparendo with the search : {}", query);
         Page<ComparendoDTO> page = null;
         List<EntityModel<ComparendoDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Comparendo/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/comparendo/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

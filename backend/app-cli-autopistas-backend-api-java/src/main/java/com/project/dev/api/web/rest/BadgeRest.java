@@ -88,7 +88,7 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Badge")
+    @GetMapping("/badge")
     public CollectionModel<EntityModel<BadgeDTO>> getAllEntities() {
         log.debug("REST request to get all entities type Badge");
         List<EntityModel<BadgeDTO>> entities = null;
@@ -118,14 +118,14 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Badge/pages")
+    @GetMapping("/badge/pages")
     public ResponseEntity<CollectionModel<EntityModel<BadgeDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type Badge");
         Page<BadgeDTO> page = null;
         List<EntityModel<BadgeDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Badge/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/badge/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/Badge")
+    @PostMapping("/badge")
     public ResponseEntity<?> saveEntity(@RequestBody BadgeDTO entityDTO) {
         log.debug("POST request to save a new entity type Badge");
         EntityModel<BadgeDTO> resource = null;
@@ -180,7 +180,7 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/Badge/{id}")
+    @PutMapping("/badge/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody BadgeDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Badge/{id}")
+    @GetMapping("/badge/{id}")
     public ResponseEntity<EntityModel<BadgeDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type Badge with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/Badge/{id}")
+    @DeleteMapping("/badge/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity Badge with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Badge/search/{query}")
+    @GetMapping("/badge/search/{query}")
     public CollectionModel<EntityModel<BadgeDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type Badge with the search : {} ", query);
         List<EntityModel<BadgeDTO>> entities = null;
@@ -279,14 +279,14 @@ public class BadgeRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Badge/search/{query}/pages")
+    @GetMapping("/badge/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<BadgeDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Badge with the search : {}", query);
         Page<BadgeDTO> page = null;
         List<EntityModel<BadgeDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Badge/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/badge/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

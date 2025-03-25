@@ -88,7 +88,7 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Periferico")
+    @GetMapping("/periferico")
     public CollectionModel<EntityModel<PerifericoDTO>> getAllEntities() {
         log.debug("REST request to get all entities type Periferico");
         List<EntityModel<PerifericoDTO>> entities = null;
@@ -118,14 +118,14 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Periferico/pages")
+    @GetMapping("/periferico/pages")
     public ResponseEntity<CollectionModel<EntityModel<PerifericoDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type Periferico");
         Page<PerifericoDTO> page = null;
         List<EntityModel<PerifericoDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Periferico/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/periferico/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/Periferico")
+    @PostMapping("/periferico")
     public ResponseEntity<?> saveEntity(@RequestBody PerifericoDTO entityDTO) {
         log.debug("POST request to save a new entity type Periferico");
         EntityModel<PerifericoDTO> resource = null;
@@ -180,7 +180,7 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/Periferico/{id}")
+    @PutMapping("/periferico/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody PerifericoDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Periferico/{id}")
+    @GetMapping("/periferico/{id}")
     public ResponseEntity<EntityModel<PerifericoDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type Periferico with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/Periferico/{id}")
+    @DeleteMapping("/periferico/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity Periferico with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Periferico/search/{query}")
+    @GetMapping("/periferico/search/{query}")
     public CollectionModel<EntityModel<PerifericoDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type Periferico with the search : {} ", query);
         List<EntityModel<PerifericoDTO>> entities = null;
@@ -279,14 +279,14 @@ public class PerifericoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Periferico/search/{query}/pages")
+    @GetMapping("/periferico/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<PerifericoDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Periferico with the search : {}", query);
         Page<PerifericoDTO> page = null;
         List<EntityModel<PerifericoDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Periferico/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/periferico/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

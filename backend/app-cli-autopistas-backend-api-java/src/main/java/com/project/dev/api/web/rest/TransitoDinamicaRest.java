@@ -88,7 +88,7 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TransitoDinamica")
+    @GetMapping("/transito-dinamica")
     public CollectionModel<EntityModel<TransitoDinamicaDTO>> getAllEntities() {
         log.debug("REST request to get all entities type TransitoDinamica");
         List<EntityModel<TransitoDinamicaDTO>> entities = null;
@@ -118,14 +118,14 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TransitoDinamica/pages")
+    @GetMapping("/transito-dinamica/pages")
     public ResponseEntity<CollectionModel<EntityModel<TransitoDinamicaDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type TransitoDinamica");
         Page<TransitoDinamicaDTO> page = null;
         List<EntityModel<TransitoDinamicaDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TransitoDinamica/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/transito-dinamica/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/TransitoDinamica")
+    @PostMapping("/transito-dinamica")
     public ResponseEntity<?> saveEntity(@RequestBody TransitoDinamicaDTO entityDTO) {
         log.debug("POST request to save a new entity type TransitoDinamica");
         EntityModel<TransitoDinamicaDTO> resource = null;
@@ -180,7 +180,7 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/TransitoDinamica/{id}")
+    @PutMapping("/transito-dinamica/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody TransitoDinamicaDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TransitoDinamica/{id}")
+    @GetMapping("/transito-dinamica/{id}")
     public ResponseEntity<EntityModel<TransitoDinamicaDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type TransitoDinamica with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/TransitoDinamica/{id}")
+    @DeleteMapping("/transito-dinamica/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity TransitoDinamica with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TransitoDinamica/search/{query}")
+    @GetMapping("/transito-dinamica/search/{query}")
     public CollectionModel<EntityModel<TransitoDinamicaDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type TransitoDinamica with the search : {} ", query);
         List<EntityModel<TransitoDinamicaDTO>> entities = null;
@@ -279,14 +279,14 @@ public class TransitoDinamicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TransitoDinamica/search/{query}/pages")
+    @GetMapping("/transito-dinamica/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<TransitoDinamicaDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TransitoDinamica with the search : {}", query);
         Page<TransitoDinamicaDTO> page = null;
         List<EntityModel<TransitoDinamicaDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TransitoDinamica/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/transito-dinamica/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
