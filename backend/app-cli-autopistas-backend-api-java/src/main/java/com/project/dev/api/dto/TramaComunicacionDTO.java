@@ -38,7 +38,7 @@ public class TramaComunicacionDTO {
     private String strNombreTrama;
     private Integer intPosicionInicial;
     private Integer intTotalDatosPeso;
-    private String crCaracterFin;
-    private String crCaracterInicio;
+    private Character crCaracterFin;
+    private Character crCaracterInicio;
 
 }

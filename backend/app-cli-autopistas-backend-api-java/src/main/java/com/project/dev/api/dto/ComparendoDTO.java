@@ -35,12 +35,12 @@ import lombok.NoArgsConstructor;
 public class ComparendoDTO {
 
     private Long intIdComparendo;
+    private String strPlacaVehiculo;
+    private Long intIdPolicia;
+    private Long intCedulaConductor;
+    private Long intTiqueteNro;
     private Integer intCodigoComparendo;
     private String strObservaciones;
-    private Character enmTipoInfractor;
-    private Long intCedulaConductor;
-    private Long intIdPolicia;
-    private String strPlacaVehiculo;
-    private Long intTiqueteNro;
+    private String enmTipoInfractor;
 
 }

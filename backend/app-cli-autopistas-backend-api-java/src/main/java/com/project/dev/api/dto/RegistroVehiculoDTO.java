@@ -35,16 +35,16 @@ import lombok.NoArgsConstructor;
 public class RegistroVehiculoDTO {
 
     private Long intTiqueteNro;
+    private Long intIdRepeso;
+    private Long intIdCategoria;
+    private Long intCedulaUsuario;
+    private String strPlacaVehiculo;
+    private Long intIdMercancia;
+    private Long intCedulaConductor;
     private Date dtFechaHoraEstatica;
     private Long intPesoEstatica;
     private Long intSobrepeso;
     private Boolean bitPesajeAutorizado;
     private Boolean bitComparendo;
-    private Long intCedulaConductor;
-    private Long intCedulaUsuario;
-    private Long intIdCategoria;
-    private Long intIdMercancia;
-    private Long intIdRepeso;
-    private String strPlacaVehiculo;
 
 }

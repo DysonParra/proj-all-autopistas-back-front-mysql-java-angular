@@ -35,10 +35,10 @@ import lombok.NoArgsConstructor;
 public class VehiculoSobrepesoDTO {
 
     private Long intIdRepeso;
+    private Long intIdDinamica;
     private Integer intPesoMaximo;
     private Integer intDiferenciaPeso;
     private String strPlacaVehiculo;
     private Boolean bitBorrado;
-    private Long intIdDinamica;
 
 }

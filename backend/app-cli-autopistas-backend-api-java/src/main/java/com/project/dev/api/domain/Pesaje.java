@@ -66,7 +66,7 @@ public class Pesaje implements Serializable {
     private String strR;
     private String strContenedor;
     private String strObservacion;
-    @Column(columnDefinition = "enum")
+    @Column(columnDefinition = "ENUM")
     private String enmTipoIngreso;
 
 }

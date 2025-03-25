@@ -44,6 +44,7 @@ public class Configuracion implements Serializable {
     private Long intIdConfiguracion;
     private String strParametro;
     @Lob
+    @Column(columnDefinition = "LONGTEXT")
     private String txtValor;
 
 }

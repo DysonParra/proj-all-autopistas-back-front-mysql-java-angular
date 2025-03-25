@@ -35,7 +35,7 @@ import lombok.NoArgsConstructor;
 public class VehiculoDTO {
 
     private String strPlacaVehiculo;
-    private String strObservaciones;
     private Long intIdCategoria;
+    private String strObservaciones;
 
 }

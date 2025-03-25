@@ -50,6 +50,7 @@ public class TransitoDinamica implements Serializable {
     private String strPesoEjes;
     private Float fltVelocidad;
     @Lob
+    @Column(columnDefinition = "LONGTEXT")
     private String txtBase64Placa;
 
 }

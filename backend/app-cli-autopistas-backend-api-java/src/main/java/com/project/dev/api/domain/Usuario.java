@@ -45,7 +45,8 @@ public class Usuario implements Serializable {
     private String strNombreUsuario;
     private String strApellidoUsuario;
     private String strSeudonimo;
-    private Character enmTipoUsuario;
+    @Column(columnDefinition = "ENUM")
+    private String enmTipoUsuario;
     private String strContrasena;
     private String strCargoUsuario;
 

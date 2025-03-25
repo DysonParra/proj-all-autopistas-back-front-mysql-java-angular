@@ -38,7 +38,7 @@ public class UsuarioDTO {
     private String strNombreUsuario;
     private String strApellidoUsuario;
     private String strSeudonimo;
-    private Character enmTipoUsuario;
+    private String enmTipoUsuario;
     private String strContrasena;
     private String strCargoUsuario;
 

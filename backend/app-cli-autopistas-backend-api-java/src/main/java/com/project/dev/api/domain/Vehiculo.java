@@ -42,7 +42,7 @@ public class Vehiculo implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private String strPlacaVehiculo;
-    private String strObservaciones;
     private Long intIdCategoria;
+    private String strObservaciones;
 
 }

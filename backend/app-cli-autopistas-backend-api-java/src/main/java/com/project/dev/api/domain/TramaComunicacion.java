@@ -45,9 +45,7 @@ public class TramaComunicacion implements Serializable {
     private String strNombreTrama;
     private Integer intPosicionInicial;
     private Integer intTotalDatosPeso;
-    @Column(columnDefinition = "Character")
-    private String crCaracterFin;
-    @Column(columnDefinition = "Character")
-    private String crCaracterInicio;
+    private Character crCaracterFin;
+    private Character crCaracterInicio;
 
 }

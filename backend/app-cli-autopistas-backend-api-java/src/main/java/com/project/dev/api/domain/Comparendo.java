@@ -42,12 +42,13 @@ public class Comparendo implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdComparendo;
+    private String strPlacaVehiculo;
+    private Long intIdPolicia;
+    private Long intCedulaConductor;
+    private Long intTiqueteNro;
     private Integer intCodigoComparendo;
     private String strObservaciones;
-    private Character enmTipoInfractor;
-    private Long intCedulaConductor;
-    private Long intIdPolicia;
-    private String strPlacaVehiculo;
-    private Long intTiqueteNro;
+    @Column(columnDefinition = "ENUM")
+    private String enmTipoInfractor;
 
 }
