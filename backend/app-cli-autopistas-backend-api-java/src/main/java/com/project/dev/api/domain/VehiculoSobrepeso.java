@@ -39,7 +39,6 @@ import lombok.NoArgsConstructor;
 public class VehiculoSobrepeso implements Serializable {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdRepeso;

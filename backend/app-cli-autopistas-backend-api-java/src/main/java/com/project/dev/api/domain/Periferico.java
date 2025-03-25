@@ -39,7 +39,6 @@ import lombok.NoArgsConstructor;
 public class Periferico implements Serializable {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intId;
