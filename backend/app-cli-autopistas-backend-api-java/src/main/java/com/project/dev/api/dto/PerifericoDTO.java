@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoDTO}
+ * @overview        {PerifericoDTO}
  *
  * @version         2.0
  *

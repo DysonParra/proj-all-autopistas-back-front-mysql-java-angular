@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MenuRestAssembler}
+ * @overview        {MenuRestAssembler}
  *
  * @version         2.0
  *

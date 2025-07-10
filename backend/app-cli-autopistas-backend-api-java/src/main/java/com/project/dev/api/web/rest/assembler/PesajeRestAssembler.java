@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PesajeRestAssembler}
+ * @overview        {PesajeRestAssembler}
  *
  * @version         2.0
  *

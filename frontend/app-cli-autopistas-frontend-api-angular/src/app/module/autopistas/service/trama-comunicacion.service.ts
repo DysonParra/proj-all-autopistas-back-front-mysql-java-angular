@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TramaComunicacionService}
+ * @overview        {TramaComunicacionService}
  *
  * @version         2.0
  *

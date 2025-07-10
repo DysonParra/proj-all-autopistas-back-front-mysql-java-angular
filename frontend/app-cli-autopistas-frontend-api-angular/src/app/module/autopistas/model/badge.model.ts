@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BadgeViewModel}
+ * @overview        {BadgeViewModel}
  *
  * @version         2.0
  *

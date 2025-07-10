@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoServiceImpl}
+ * @overview        {PerifericoServiceImpl}
  *
  * @version         2.0
  *
@@ -55,7 +55,7 @@ public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
      * Obtiene todas las entidades existentes.
      *
      * @return lista de entidades almacenadas en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public List<PerifericoDTO> getAllEntities() throws Exception {
@@ -64,15 +64,15 @@ public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
     }
 
     /**
-     * Obtiene todas los registros según la paginación suministrada.
+     * Obtiene todos los registros según la paginación suministrada.
      *
      * @param pageable indica la manera en que se paginarán los registros obtenidos.
      * @return entidades almacenadas en base de datos de forma paginada.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public Page<PerifericoDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
-        log.debug("Solicitud para listar todas las Entidades tipo Periferico con paginacion");
+        log.debug("Solicitud para listar todas las Entidades tipo Periferico con paginación");
         return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
@@ -81,26 +81,26 @@ public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
      *
      * @param entityDTO entidad que va a ser almacenada.
      * @return entidad almacenada en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public PerifericoDTO saveUpdate(PerifericoDTO entityDTO) throws Exception {
         log.debug("Solicitud para guardar la entidad tipo Periferico: {}", entityDTO);
 
-        //TODO: agregar validacion especifica del servicio.
+        //TODO: agregar validación específica del servicio.
         Periferico entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PerifericoDTO currrentEntity = entityMapping.getDto(entity);
-        return currrentEntity;
+        PerifericoDTO dto = entityMapping.getDto(entity);
+        return dto;
     }
 
     /**
-     * Obtiene la entidad según el id suministrado.
+     * Obtiene la entidad usando el ID suministrado.
      *
      * @param id es el identificador de la entidad.
      * @return entidad almacenada en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public PerifericoDTO getEntity(String id) throws Exception {
@@ -114,7 +114,7 @@ public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
      * Elimina los datos de una entidad.
      *
      * @param id identificador de la entidad que va a ser eliminada.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public void deleteEntity(String id) throws Exception {
@@ -127,7 +127,7 @@ public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
      *
      * @param query indica la búsqueda que se hará en la base de datos.
      * @return entidades almacenadas en base de datos encontradas.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public List<PerifericoDTO> searchEntities(String query) throws Exception {
@@ -136,7 +136,7 @@ public class PerifericoServiceImpl implements GenericService<PerifericoDTO> {
     }
 
     /**
-     * Obtiene registros de la base de datos según la búsqueda y paginación suministradas.
+     * Obtiene registros de la base de datos según la búsqueda y la paginación que se indicaron.
      *
      * @param query    indica la búsqueda que se hará en la base de datos.
      * @param pageable indica la manera en que se paginarán los registros obtenidos.

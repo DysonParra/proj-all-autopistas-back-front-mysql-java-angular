@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {VehiculoSobrepesoViewComponent}
+ * @overview        {VehiculoSobrepesoViewComponent}
  *
  * @version         2.0
  *

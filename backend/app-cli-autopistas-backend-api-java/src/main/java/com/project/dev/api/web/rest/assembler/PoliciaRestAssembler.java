@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PoliciaRestAssembler}
+ * @overview        {PoliciaRestAssembler}
  *
  * @version         2.0
  *

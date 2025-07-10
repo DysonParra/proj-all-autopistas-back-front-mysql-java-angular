@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TransitoDinamicaRestAssembler}
+ * @overview        {TransitoDinamicaRestAssembler}
  *
  * @version         2.0
  *

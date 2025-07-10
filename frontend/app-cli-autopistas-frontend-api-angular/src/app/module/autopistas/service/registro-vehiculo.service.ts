@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegistroVehiculoService}
+ * @overview        {RegistroVehiculoService}
  *
  * @version         2.0
  *

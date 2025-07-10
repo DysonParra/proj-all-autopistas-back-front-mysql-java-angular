@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BadgeRestAssembler}
+ * @overview        {BadgeRestAssembler}
  *
  * @version         2.0
  *

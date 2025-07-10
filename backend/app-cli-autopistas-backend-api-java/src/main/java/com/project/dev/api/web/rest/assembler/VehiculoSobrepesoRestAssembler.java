@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {VehiculoSobrepesoRestAssembler}
+ * @overview        {VehiculoSobrepesoRestAssembler}
  *
  * @version         2.0
  *

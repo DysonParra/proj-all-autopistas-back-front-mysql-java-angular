@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TransitoDinamicaContainerComponent}
+ * @overview        {TransitoDinamicaContainerComponent}
  *
  * @version         2.0
  *

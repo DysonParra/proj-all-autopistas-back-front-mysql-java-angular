@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MercanciaFacade}
+ * @overview        {MercanciaFacade}
  *
  * @version         2.0
  *

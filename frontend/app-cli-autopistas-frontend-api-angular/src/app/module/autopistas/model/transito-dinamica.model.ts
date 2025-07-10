@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TransitoDinamicaViewModel}
+ * @overview        {TransitoDinamicaViewModel}
  *
  * @version         2.0
  *

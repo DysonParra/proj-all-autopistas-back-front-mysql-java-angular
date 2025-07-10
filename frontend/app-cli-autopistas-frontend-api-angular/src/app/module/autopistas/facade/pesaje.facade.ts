@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PesajeFacade}
+ * @overview        {PesajeFacade}
  *
  * @version         2.0
  *

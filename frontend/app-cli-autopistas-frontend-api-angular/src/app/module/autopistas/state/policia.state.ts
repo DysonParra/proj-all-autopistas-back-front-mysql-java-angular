@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PoliciaState}
+ * @overview        {PoliciaState}
  *
  * @version         2.0
  *

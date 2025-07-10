@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MenuFacade}
+ * @overview        {MenuFacade}
  *
  * @version         2.0
  *

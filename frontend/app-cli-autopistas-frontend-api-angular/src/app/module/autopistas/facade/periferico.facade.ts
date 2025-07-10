@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoFacade}
+ * @overview        {PerifericoFacade}
  *
  * @version         2.0
  *

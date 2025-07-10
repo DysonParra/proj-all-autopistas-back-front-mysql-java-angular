@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PoliciaFacade}
+ * @overview        {PoliciaFacade}
  *
  * @version         2.0
  *

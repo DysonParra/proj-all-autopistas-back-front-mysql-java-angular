@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PesajeService}
+ * @overview        {PesajeService}
  *
  * @version         2.0
  *

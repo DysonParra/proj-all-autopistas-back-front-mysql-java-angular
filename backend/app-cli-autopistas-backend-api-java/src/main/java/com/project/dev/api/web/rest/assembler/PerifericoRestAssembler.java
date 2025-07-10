@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoRestAssembler}
+ * @overview        {PerifericoRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TramaComunicacionRestAssembler}
+ * @overview        {TramaComunicacionRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoService}
+ * @overview        {PerifericoService}
  *
  * @version         2.0
  *

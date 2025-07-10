@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MenuState}
+ * @overview        {MenuState}
  *
  * @version         2.0
  *

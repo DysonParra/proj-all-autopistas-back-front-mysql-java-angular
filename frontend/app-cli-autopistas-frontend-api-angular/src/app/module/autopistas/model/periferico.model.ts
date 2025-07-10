@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PerifericoViewModel}
+ * @overview        {PerifericoViewModel}
  *
  * @version         2.0
  *

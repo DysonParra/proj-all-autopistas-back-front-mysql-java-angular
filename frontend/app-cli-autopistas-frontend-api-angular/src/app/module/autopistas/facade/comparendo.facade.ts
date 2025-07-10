@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ComparendoFacade}
+ * @overview        {ComparendoFacade}
  *
  * @version         2.0
  *

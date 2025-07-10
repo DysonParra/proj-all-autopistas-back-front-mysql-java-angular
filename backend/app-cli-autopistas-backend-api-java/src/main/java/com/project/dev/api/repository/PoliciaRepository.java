@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PoliciaRepository}
+ * @overview        {PoliciaRepository}
  *
  * @version         2.0
  *

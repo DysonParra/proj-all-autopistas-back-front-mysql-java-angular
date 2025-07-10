@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MenuContainerComponent}
+ * @overview        {MenuContainerComponent}
  *
  * @version         2.0
  *

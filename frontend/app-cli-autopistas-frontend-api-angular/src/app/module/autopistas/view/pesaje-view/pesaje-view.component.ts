@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PesajeViewComponent}
+ * @overview        {PesajeViewComponent}
  *
  * @version         2.0
  *

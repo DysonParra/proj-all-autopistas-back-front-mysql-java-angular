@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RegistroVehiculoContainerComponent}
+ * @overview        {RegistroVehiculoContainerComponent}
  *
  * @version         2.0
  *

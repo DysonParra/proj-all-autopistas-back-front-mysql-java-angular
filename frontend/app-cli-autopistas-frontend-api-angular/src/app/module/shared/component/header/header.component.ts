@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {HeaderComponent}
+ * @overview        {HeaderComponent}
  *
  * @version         2.0
  *
@@ -44,63 +44,78 @@ export class HeaderComponent implements OnInit {
                 name: 'Badge',
                 route: 'badge',
                 items: []
-            },            {
+            },
+            {
                 name: 'Categoria',
                 route: 'categoria',
                 items: []
-            },            {
+            },
+            {
                 name: 'Comparendo',
                 route: 'comparendo',
                 items: []
-            },            {
+            },
+            {
                 name: 'Conductor',
                 route: 'conductor',
                 items: []
-            },            {
+            },
+            {
                 name: 'Configuracion',
                 route: 'configuracion',
                 items: []
-            },            {
+            },
+            {
                 name: 'Menu',
                 route: 'menu',
                 items: []
-            },            {
+            },
+            {
                 name: 'Mercancia',
                 route: 'mercancia',
                 items: []
-            },            {
+            },
+            {
                 name: 'Periferico',
                 route: 'periferico',
                 items: []
-            },            {
+            },
+            {
                 name: 'Pesaje',
                 route: 'pesaje',
                 items: []
-            },            {
+            },
+            {
                 name: 'Policia',
                 route: 'policia',
                 items: []
-            },            {
+            },
+            {
                 name: 'RegistroVehiculo',
                 route: 'registro-vehiculo',
                 items: []
-            },            {
+            },
+            {
                 name: 'TramaComunicacion',
                 route: 'trama-comunicacion',
                 items: []
-            },            {
+            },
+            {
                 name: 'TransitoDinamica',
                 route: 'transito-dinamica',
                 items: []
-            },            {
+            },
+            {
                 name: 'Usuario',
                 route: 'usuario',
                 items: []
-            },            {
+            },
+            {
                 name: 'Vehiculo',
                 route: 'vehiculo',
                 items: []
-            },            {
+            },
+            {
                 name: 'VehiculoSobrepeso',
                 route: 'vehiculo-sobrepeso',
                 items: []

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TransitoDinamicaFacade}
+ * @overview        {TransitoDinamicaFacade}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ComparendoViewModel}
+ * @overview        {ComparendoViewModel}
  *
  * @version         2.0
  *

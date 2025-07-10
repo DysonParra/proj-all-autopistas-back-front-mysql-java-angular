@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MercanciaViewComponent}
+ * @overview        {MercanciaViewComponent}
  *
  * @version         2.0
  *

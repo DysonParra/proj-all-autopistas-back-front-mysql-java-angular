@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {VehiculoSobrepesoRepository}
+ * @overview        {VehiculoSobrepesoRepository}
  *
  * @version         2.0
  *

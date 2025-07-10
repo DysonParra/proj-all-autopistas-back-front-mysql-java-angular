@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BadgeState}
+ * @overview        {BadgeState}
  *
  * @version         2.0
  *

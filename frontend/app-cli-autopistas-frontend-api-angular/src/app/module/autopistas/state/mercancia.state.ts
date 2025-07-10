@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MercanciaState}
+ * @overview        {MercanciaState}
  *
  * @version         2.0
  *
